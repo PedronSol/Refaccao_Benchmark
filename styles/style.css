@@ -141,13 +141,17 @@ hr {
     padding-left: 6%;
 }
 
+.principal__conteudo__baixo {
+    height: 100%;
+}
+
 .principal__conteudo__cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 3% 0 0 0;
     width: 100%;
-    height: 100%;
+    height: 22%;
 }
 
 .principal__conteudo__cards__card {
@@ -203,6 +207,11 @@ hr {
     height: 1%;
     width: 100%;
     padding: 10% 0 0 0;
+}
+
+.principal__conteudo__centro{
+    border: 1px solid blue;
+    height: 70.5%;
 }
 
 .principal__filtros {
