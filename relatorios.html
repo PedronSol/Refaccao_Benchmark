@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title>Visão Geral</title>
+  </head>
+
+  <body>
+    <main class="principal">
+      <aside id="minhaSidebar" class="sidebar">
+        <a href="#" id="logoBtn" class="sidebar__btn" onclick="decideNav()">
+          <img
+            src="assets/Logo_Newgate_Pequena.png"
+            id="logoImg"
+            alt="Logo Newgate"
+          />
+        </a>
+        <hr id="linhaHorizontal" />
+        <a href="index.html" class="sidebar__link">
+          <img
+            src="assets/icons/Grid.png"
+            id="visaoGeralBtn"
+            alt=""
+            class="sidebar__link__img"
+          />
+          <span class="sidebar__link__texto" id="visaoGeralTexto"
+            >Visão Geral</span
+          >
+        </a>
+        <a href="dashboards.html" class="sidebar__link">
+          <img
+            src="assets/icons/Pie Chart.png"
+            alt=""
+            class="sidebar__link__img"
+            id="dashboardsBtn"
+          />
+          <span class="sidebar__link__texto" id="dashboardsTexto"
+            >Dashboards</span
+          >
+        </a>
+        <a href="#" class="sidebar__link">
+          <img
+            src="assets/icons/Text.png"
+            alt=""
+            class="sidebar__link__img current"
+            id="relatoriosBtn"
+          />
+          <span class="sidebar__link__texto" id="relatoriosTexto"
+            >Relatórios</span
+          >
+        </a>
+        <a href="perfilUsuarios.html" class="sidebar__link">
+          <img
+            src="assets/icons/Person.png"
+            alt=""
+            class="sidebar__link__img"
+            id="perfilUsuarioBtn"
+          />
+          <span class="sidebar__link__texto" id="perfilUsuarioTexto"
+            >Perfil do Usuário</span
+          >
+        </a>
+        <a href="configuracoes.html" class="sidebar__link">
+          <img
+            src="assets/icons/Setting 1.png"
+            alt=""
+            class="sidebar__link__img"
+            id="configuracoesBtn"
+          />
+          <span class="sidebar__link__texto" id="configuracoesTexto"
+            >Configurações</span
+          >
+        </a>
+      </aside>
+
+      <section id="principalConteudo" class="principal__conteudo">
+        <h1 class="principal__conteudo__topo__titulo">Relatórios</h1>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
