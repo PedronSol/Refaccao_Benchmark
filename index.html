@@ -80,9 +80,21 @@
       <section id="principalConteudo" class="principal__conteudo">
         <div class="principal__conteudo__topo">
           <h1 class="principal__conteudo__topo__titulo">Visão Geral</h1>
-          <a href="#" class="principal__conteudo__topo__filtros" onmouseover="hover();" onmouseout="unhover();">
-            <img id="imagemFunil" src="assets/icons/funilFiltros.png" alt="Icone de um funil"/>
-            <span class="principal__conteudo__topo__filtros__texto">Filtros</span>
+          <a
+            href="#"
+            class="principal__conteudo__topo__filtros"
+            onmouseover="hoverFilter();"
+            onmouseout="unhoverFilter();"
+            onclick="openFilter();"
+          >
+            <img
+              id="imagemFunil"
+              src="assets/icons/funilFiltros.png"
+              alt="Icone de um funil"
+            />
+            <span class="principal__conteudo__topo__filtros__texto"
+              >Filtros</span
+            >
           </a>
         </div>
         <div class="principal__conteudo__baixo">
@@ -152,6 +164,20 @@
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="paginaFiltros" class="principal__filtros">
+        <div class="principal__filtros__conteudo">
+          <img
+            id="iconeRetorno"
+            src="assets/icons/Left.svg"
+            alt=""
+            class="principal__filtros__conteudo__imagemRetorno"
+            onmouseover="hoverBack();"
+            onmouseout="unhoverBack();"
+            onclick="closeFilter();"
+          />
         </div>
       </section>
     </main>

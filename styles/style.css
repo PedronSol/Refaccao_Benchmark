@@ -8,6 +8,30 @@
     --azul-newgate: #356AFF;
 }
 
+@keyframes mostraFiltros {
+    from {
+        width: 0%;
+        display: none;
+    }
+
+    to{
+        width: 20vw;
+        display: flex;
+    }
+}
+
+@keyframes fechaFiltros {
+    from {
+        width: 20vw;
+        display: flex;
+    }
+
+    to{
+        width: 0%;
+        display: none;
+    }
+}
+
 body {
     background-color: var(--branco-background);
     height: 100vh;
@@ -179,4 +203,25 @@ hr {
     height: 1%;
     width: 100%;
     padding: 10% 0 0 0;
+}
+
+.principal__filtros {
+    position: fixed;
+    display: none;
+    background-color: var(--branco);
+    right: 0;
+    height: 100vh;
+    width: 20vw;
+}
+
+.principal__filtros__conteudo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+.principal__filtros__conteudo__imagemRetorno {
+    width: 15%;
+    height: 6%;
 }

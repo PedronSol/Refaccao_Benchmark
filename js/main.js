@@ -47,12 +47,30 @@ function openNav() {
     isNavOpen = false;
   }
 
-function hover() {
+function hoverFilter() {
     document.getElementById("imagemFunil").setAttribute('src', 'assets/icons/funilFiltroBranco.png');
 }
   
-function unhover() {
+function unhoverFilter() {
     document.getElementById("imagemFunil").setAttribute('src', 'assets/icons/funilFiltros.png');
+}
+
+function openFilter() {
+  document.getElementById("paginaFiltros").style.animation = "0.3s mostraFiltros";
+  document.getElementById("paginaFiltros").style.display = "flex";
+}
+
+function hoverBack() {
+  document.getElementById("iconeRetorno").setAttribute('src', 'assets/icons/LeftHover.svg' );
+}
+
+function unhoverBack() {
+  document.getElementById("iconeRetorno").setAttribute('src', 'assets/icons/Left.svg' );
+}
+
+function closeFilter() {
+  document.getElementById("paginaFiltros").style.animation = "0.3s fechaFiltros";
+  document.getElementById("paginaFiltros").style.display = "none";
 }
 
 function decideNav() {
