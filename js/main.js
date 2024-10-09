@@ -2,83 +2,91 @@ var isNavOpen = false;
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("minhaSidebar").style.width = "10%";
-    document.getElementById("minhaSidebar").style.alignItems = "start";
-    document.getElementById("minhaSidebar").style.gap = "3%";
+  document.getElementById("minhaSidebar").style.width = "10%";
+  document.getElementById("minhaSidebar").style.alignItems = "start";
+  document.getElementById("minhaSidebar").style.gap = "3%";
 
-    document.getElementById("logoImg").src = "assets/Logo_Newgate_Grande.png";
+  document.getElementById("logoImg").src = "assets/Logo_Newgate_Grande.png";
 
-    document.getElementById("principalConteudo").style.marginLeft = "11%"
+  document.getElementById("principalConteudo").style.marginLeft = "11%";
 
-    document.getElementById("visaoGeralTexto").style.display = "inline";
-    document.getElementById("dashboardsTexto").style.display = "inline";
-    document.getElementById("relatoriosTexto").style.display = "inline";
-    document.getElementById("perfilUsuarioTexto").style.display = "inline";
-    document.getElementById("configuracoesTexto").style.display = "inline";
+  document.getElementById("visaoGeralTexto").style.display = "inline";
+  document.getElementById("dashboardsTexto").style.display = "inline";
+  document.getElementById("relatoriosTexto").style.display = "inline";
+  document.getElementById("perfilUsuarioTexto").style.display = "inline";
+  document.getElementById("configuracoesTexto").style.display = "inline";
 
-    document.getElementById("logoBtn").style.margin = "10% 0 4% 0";
+  document.getElementById("logoBtn").style.margin = "10% 0 4% 0";
 
-    document.getElementById("linhaHorizontal").style.margin = "-10% 0"
+  document.getElementById("linhaHorizontal").style.margin = "-10% 0";
 
-    isNavOpen = true;
-  }
-  
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-  function closeNav() {
-    document.getElementById("minhaSidebar").style.width = "4%";
-    document.getElementById("minhaSidebar").style.alignItems = "center";
+  isNavOpen = true;
+}
 
-    document.getElementById("logoImg").src = "assets/Logo_Newgate_Pequena.png";
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("minhaSidebar").style.width = "4%";
+  document.getElementById("minhaSidebar").style.alignItems = "center";
 
-    document.getElementById("principalConteudo").style.marginLeft = "5%"
+  document.getElementById("logoImg").src = "assets/Logo_Newgate_Pequena.png";
 
-    document.getElementById("visaoGeralTexto").style.display = "None";
-    document.getElementById("dashboardsTexto").style.display = "None";
-    document.getElementById("relatoriosTexto").style.display = "None";
-    document.getElementById("perfilUsuarioTexto").style.display = "None";
-    document.getElementById("configuracoesTexto").style.display = "None";
+  document.getElementById("principalConteudo").style.marginLeft = "5%";
 
-    document.getElementById("logoBtn").style.margin = "25% 0 4% 0";
+  document.getElementById("visaoGeralTexto").style.display = "None";
+  document.getElementById("dashboardsTexto").style.display = "None";
+  document.getElementById("relatoriosTexto").style.display = "None";
+  document.getElementById("perfilUsuarioTexto").style.display = "None";
+  document.getElementById("configuracoesTexto").style.display = "None";
 
-    document.getElementById("linhaHorizontal").style.margin = "-40% 0"
+  document.getElementById("logoBtn").style.margin = "25% 0 4% 0";
 
-    document.getElementById("minhaSidebar").style.gap = "5.2%";
+  document.getElementById("linhaHorizontal").style.margin = "-40% 0";
 
-    isNavOpen = false;
-  }
+  document.getElementById("minhaSidebar").style.gap = "5.2%";
+
+  isNavOpen = false;
+}
 
 function hoverFilter() {
-    document.getElementById("imagemFunil").setAttribute('src', 'assets/icons/funilFiltroBranco.png');
+  document
+    .getElementById("imagemFunil")
+    .setAttribute("src", "assets/icons/funilFiltroBranco.png");
 }
-  
+
 function unhoverFilter() {
-    document.getElementById("imagemFunil").setAttribute('src', 'assets/icons/funilFiltros.png');
+  document
+    .getElementById("imagemFunil")
+    .setAttribute("src", "assets/icons/funilFiltros.png");
 }
 
 function openFilter() {
-  document.getElementById("paginaFiltros").style.animation = "0.3s mostraFiltros";
+  document.getElementById("paginaFiltros").style.animation =
+    "0.3s mostraFiltros";
   document.getElementById("paginaFiltros").style.display = "flex";
 }
 
 function hoverBack() {
-  document.getElementById("iconeRetorno").setAttribute('src', 'assets/icons/LeftHover.svg' );
+  document
+    .getElementById("iconeRetorno")
+    .setAttribute("src", "assets/icons/LeftHover.svg");
 }
 
 function unhoverBack() {
-  document.getElementById("iconeRetorno").setAttribute('src', 'assets/icons/Left.svg' );
+  document
+    .getElementById("iconeRetorno")
+    .setAttribute("src", "assets/icons/Left.svg");
 }
 
 function closeFilter() {
-  document.getElementById("paginaFiltros").style.animation = "0.3s fechaFiltros";
+  document.getElementById("paginaFiltros").style.animation =
+    "0.3s fechaFiltros";
   document.getElementById("paginaFiltros").style.display = "none";
 }
 
 function decideNav() {
   if (isNavOpen == true) {
     closeNav();
-  }
-
-  else {
+  } else {
     openNav();
   }
 }

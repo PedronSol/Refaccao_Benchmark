@@ -1,3 +1,9 @@
+/* 
+TODO - Fazer media queries para mudança do tamanho dos textos e para que as imagens desapareçam ao atingir um certo tamanho limite (será necessário testear esse tamanho)
+
+ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display, margens ou nenhuma estilização relevante, mas já possui classes e está delimitado por uma borda azul.
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
@@ -212,6 +218,28 @@ hr {
 .principal__conteudo__centro{
     border: 1px solid blue;
     height: 70.5%;
+    display: flex;
+}
+
+/* .principal__conteudo__centro__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.principal__conteudo__centro__cards__card{
+    display: flex;
+    background-color: var(--branco);
+    width: 55%;
+    height: 82%;
+    border-radius: 16px;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+} */
+
+.centro__conteudo__card{
 }
 
 .principal__filtros {
@@ -225,12 +253,47 @@ hr {
 
 .principal__filtros__conteudo {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     padding: 5%;
 }
 
+.principal__filtros__conteudo__topo{
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+
+.principal__filtros__conteudo__centro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.filtro__conteudo__centro__titulo{
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}
+
+#inputData{
+    padding: 3%;
+    margin-top: -1%;
+    border-radius: 16px;
+    width: 93.5%;
+    border: 1px solid grey;
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+    text-align: center;
+}
+
 .principal__filtros__conteudo__imagemRetorno {
-    width: 15%;
-    height: 6%;
+    width: fit-content;
+    height: 100%;
 }

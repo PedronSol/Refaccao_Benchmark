@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Visão Geral</title>
   </head>
 
@@ -165,13 +166,19 @@
             </div>
           </div>
           <div class="principal__conteudo__centro">
-            <h1>Alguma coisa</h1>
+            <div class="principal__conteudo__centro__cards">
+              <div class="principal__conteudo__centro__cards__card">
+                <div class="centro__conteudo__card">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="paginaFiltros" class="principal__filtros">
         <div class="principal__filtros__conteudo">
+          <div class="principal__filtros__conteudo__topo">
           <img
             id="iconeRetorno"
             src="assets/icons/Left.svg"
@@ -182,9 +189,17 @@
             onclick="closeFilter();"
           />
         </div>
+          <div class="principal__filtros__conteudo__centro">
+            <label for="inputData" class="filtro__conteudo__centro__titulo">Período</label><br>
+            <input id="inputData" type="text" placeholder="Selecione um período"/>
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="js/datepicker.js"></script>
   </body>
 </html>
