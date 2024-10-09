@@ -12,6 +12,7 @@ ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display,
     --fonte-merriweather: "Merriweather Sans", sans-serif;
     --tempo-transicao: 0.3s;
     --azul-newgate: #356AFF;
+    --azul-escuro-newgate: #094bd8;
 }
 
 @keyframes mostraFiltros {
@@ -268,7 +269,8 @@ hr {
 .principal__filtros__conteudo__centro{
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 12%;
+    height: 20%;
 }
 
 .filtro__conteudo__centro__titulo{
@@ -291,6 +293,53 @@ hr {
     font-weight: 400;
     color: grey;
     text-align: center;
+}
+
+.filtro__conteudo__centro__botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    height: 22%;
+}
+
+.botao__filtrar{
+    display: flex;
+    background-color: var(--azul-newgate);
+    color: var(--branco);
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    width: 47%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.botao__filtrar:hover {
+    background-color: var(--azul-escuro-newgate);
+}
+
+.botao__limpaFiltros {
+    display: flex;
+    background-color: grey;
+    color: var(--branco);
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    width: 47%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.botao__limpaFiltros:hover {
+    background-color: rgb(77, 77, 77);
 }
 
 .principal__filtros__conteudo__imagemRetorno {
