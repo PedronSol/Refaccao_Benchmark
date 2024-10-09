@@ -234,7 +234,7 @@ hr {
 .principal__conteudo__centro__cards__card__1{
     background-color: var(--branco);
     width: 60%;
-    height: 80%;
+    height: fit-content;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
