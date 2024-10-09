@@ -240,7 +240,16 @@ hr {
 }
 
 .centro__conteudo__card__1{
-    padding: 5%;
+    padding: 3% 5% 2% 1%;
+}
+
+.titulo__card__1{
+    margin-top: -2%;
+    margin-bottom: 4%;
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .principal__conteudo__centro__cards__card__2{

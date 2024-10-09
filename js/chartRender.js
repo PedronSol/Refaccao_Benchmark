@@ -1,4 +1,4 @@
-new Chart(document.getElementById("line-chart"), {
+new Chart(document.getElementById("grafico-postagens-dia"), {
     type: 'line',
     data: {
       labels: ['30/09/2024','01/10/2024','02/10/2024','03/10/2024','04/10/2024','05/10/2024','06/10/2024','07/10/2024','08/10/2024','09/10/2024'],
@@ -17,7 +17,7 @@ new Chart(document.getElementById("line-chart"), {
     },
     options: {
       title: {
-        display: true,
+        display: false,
         text: 'Postagens por dia',
       },
       responsive: true,
