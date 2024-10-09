@@ -26,3 +26,43 @@ new Chart(document.getElementById("line-chart"), {
       }
     },
   });
+
+new Chart(document.getElementById("donut-chart-paulinho"), {
+  type: 'doughnut',
+  data: {
+    labels: ["Positivas", "Negativas", "Neutras"],
+    datasets: [
+      {
+        label: "Postagens",
+        backgroundColor: ["#2dba09", "#ba0909","#737272"],
+        data: [2500, 800, 450]
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Resumo das postagens (Paulinho)'
+    }
+  }
+});
+
+new Chart(document.getElementById("donut-chart-natalia"), {
+  type: 'doughnut',
+  data: {
+    labels: ["Positivas", "Negativas", "Neutras"],
+    datasets: [
+      {
+        label: "Postagens",
+        backgroundColor: ["#2dba09", "#ba0909","#737272"],
+        data: [1250, 900, 2000]
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Resumo das postagens (Natalia)'
+    }
+  }
+});

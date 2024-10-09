@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <title>Visão Geral</title>
   </head>
 
@@ -167,8 +168,14 @@
           </div>
           <div class="principal__conteudo__centro">
             <div class="principal__conteudo__centro__cards">
-              <div class="principal__conteudo__centro__cards__card">
-                <div class="centro__conteudo__card">
+              <div class="principal__conteudo__centro__cards__card__1">
+                <div class="centro__conteudo__card__1">
+                  <canvas id="line-chart"></canvas>
+                </div>
+              </div>
+              <div class="principal__conteudo__centro__cards__card__2">
+                <div class="centro__conteudo__card__2">
+                  
                 </div>
               </div>
             </div>
@@ -209,5 +216,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
     <script src="js/datepicker.js"></script>
+    <script src="js/chartRender.js"></script>
   </body>
 </html>
