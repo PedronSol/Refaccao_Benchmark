@@ -6,7 +6,7 @@ function openNav() {
   document.getElementById("minhaSidebar").style.alignItems = "start";
   document.getElementById("minhaSidebar").style.gap = "3%";
 
-  document.getElementById("logoImg").src = "assets/Logo_Newgate_Grande.png";
+  document.getElementById("logoImg").src = "../assets/Logo_Newgate_Grande.png";
 
   document.getElementById("principalConteudo").style.marginLeft = "11%";
 
@@ -28,7 +28,7 @@ function closeNav() {
   document.getElementById("minhaSidebar").style.width = "4%";
   document.getElementById("minhaSidebar").style.alignItems = "center";
 
-  document.getElementById("logoImg").src = "assets/Logo_Newgate_Pequena.png";
+  document.getElementById("logoImg").src = "../assets/Logo_Newgate_Pequena.png";
 
   document.getElementById("principalConteudo").style.marginLeft = "5%";
 
@@ -50,13 +50,13 @@ function closeNav() {
 function hoverFilter() {
   document
     .getElementById("imagemFunil")
-    .setAttribute("src", "assets/icons/funilFiltroBranco.png");
+    .setAttribute("src", "../assets/icons/funilFiltroBranco.png");
 }
 
 function unhoverFilter() {
   document
     .getElementById("imagemFunil")
-    .setAttribute("src", "assets/icons/funilFiltros.png");
+    .setAttribute("src", "../assets/icons/funilFiltros.png");
 }
 
 function openFilter() {
@@ -68,13 +68,13 @@ function openFilter() {
 function hoverBack() {
   document
     .getElementById("iconeRetorno")
-    .setAttribute("src", "assets/icons/LeftHover.svg");
+    .setAttribute("src", "../assets/icons/LeftHover.svg");
 }
 
 function unhoverBack() {
   document
     .getElementById("iconeRetorno")
-    .setAttribute("src", "assets/icons/Left.svg");
+    .setAttribute("src", "../assets/icons/Left.svg");
 }
 
 function closeFilter() {

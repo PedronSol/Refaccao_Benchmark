@@ -3,220 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <title>Visão Geral</title>
+    <link rel="stylesheet" href="styles/paginaLogin.css" />
+    <title>Document</title>
   </head>
-
   <body>
-    <main class="principal">
-      <aside id="minhaSidebar" class="sidebar">
-        <a href="#" id="logoBtn" class="sidebar__btn" onclick="decideNav()">
-          <img
-            src="assets/Logo_Newgate_Pequena.png"
-            id="logoImg"
-            alt="Logo Newgate"
-          />
-        </a>
-        <hr id="linhaHorizontal" />
-        <a href="#" class="sidebar__link">
-          <img
-            src="assets/icons/Grid.png"
-            id="visaoGeralBtn"
-            alt=""
-            class="sidebar__link__img current"
-          />
-          <span class="sidebar__link__texto" id="visaoGeralTexto"
-            >Visão Geral</span
-          >
-        </a>
-        <a href="dashboards.html" class="sidebar__link">
-          <img
-            src="assets/icons/Pie Chart.png"
-            alt=""
-            class="sidebar__link__img"
-            id="dashboardsBtn"
-          />
-          <span class="sidebar__link__texto" id="dashboardsTexto"
-            >Dashboards</span
-          >
-        </a>
-        <a href="relatorios.html" class="sidebar__link">
-          <img
-            src="assets/icons/Text.png"
-            alt=""
-            class="sidebar__link__img"
-            id="relatoriosBtn"
-          />
-          <span class="sidebar__link__texto" id="relatoriosTexto"
-            >Relatórios</span
-          >
-        </a>
-        <a href="perfilUsuarios.html" class="sidebar__link">
-          <img
-            src="assets/icons/Person.png"
-            alt=""
-            class="sidebar__link__img"
-            id="perfilUsuarioBtn"
-          />
-          <span class="sidebar__link__texto" id="perfilUsuarioTexto"
-            >Perfil do Usuário</span
-          >
-        </a>
-        <a href="configuracoes.html" class="sidebar__link">
-          <img
-            src="assets/icons/Setting 1.png"
-            alt=""
-            class="sidebar__link__img"
-            id="configuracoesBtn"
-          />
-          <span class="sidebar__link__texto" id="configuracoesTexto"
-            >Configurações</span
-          >
-        </a>
-      </aside>
-
-      <section id="principalConteudo" class="principal__conteudo">
-        <div class="principal__conteudo__topo">
-          <h1 class="principal__conteudo__topo__titulo">Visão Geral</h1>
-          <a
-            href="#"
-            class="principal__conteudo__topo__filtros"
-            onmouseover="hoverFilter();"
-            onmouseout="unhoverFilter();"
-            onclick="openFilter();"
-          >
+    <main class="pagina__login">
+      <div class="pagina__login__esquerda">
+        <img src="assets/Camada_1.png" alt="" />
+      </div>
+      <div class="pagina__login__centro">
+        <div class="pagina__login__card">
+          <div class="login__card__topo">
             <img
-              id="imagemFunil"
-              src="assets/icons/funilFiltros.png"
-              alt="Icone de um funil"
+              src="assets/Logos-NewGate_transparente_logo vertical_azul ecuro_azul claro 2.png"
+              alt=""
             />
-            <span class="principal__conteudo__topo__filtros__texto"
-              >Filtros</span
-            >
-          </a>
-        </div>
-        <div class="principal__conteudo__baixo">
-          <div class="principal__conteudo__cards">
-            <div class="principal__conteudo__cards__card">
-              <div class="conteudo__cards">
-                <div class="esquerda__card">
-                  <h1 class="card__titulo">Impressions</h1>
-                  <p class="card__texto">1.9M</p>
-                </div>
-                <div class="direita__card">
-                  <img src="assets/Path 2.png" alt="" class="card__imagem" />
-                </div>
-              </div>
-              <img
-                src="assets/Horizontal.png"
-                alt=""
-                class="divisoria__cards"
-              />
-            </div>
-            <div class="principal__conteudo__cards__card">
-              <div class="conteudo__cards">
-                <div class="esquerda__card">
-                  <h1 class="card__titulo">Spent</h1>
-                  <p class="card__texto">$41.2k</p>
-                </div>
-                <div class="direita__card">
-                  <img src="assets/Path 2.png" alt="" class="card__imagem" />
-                </div>
-              </div>
-              <img
-                src="assets/Horizontal.png"
-                alt=""
-                class="divisoria__cards"
-              />
-            </div>
-            <div class="principal__conteudo__cards__card">
-              <div class="conteudo__cards">
-                <div class="esquerda__card">
-                  <h1 class="card__titulo">Engagements</h1>
-                  <p class="card__texto">36.6k</p>
-                </div>
-                <div class="direita__card">
-                  <img src="assets/Path 2.png" alt="" class="card__imagem" />
-                </div>
-              </div>
-              <img
-                src="assets/Horizontal.png"
-                alt=""
-                class="divisoria__cards"
-              />
-            </div>
-            <div class="principal__conteudo__cards__card">
-              <div class="conteudo__cards">
-                <div class="esquerda__card">
-                  <h1 class="card__titulo">Conversions</h1>
-                  <p class="card__texto">131.1k</p>
-                </div>
-                <div class="direita__card">
-                  <img src="assets/bars.png" alt="" class="card__imagem" />
-                </div>
-              </div>
-              <img
-                src="assets/Horizontal.png"
-                alt=""
-                class="divisoria__cards"
-              />
-            </div>
           </div>
-          <div class="principal__conteudo__centro">
-            <div class="principal__conteudo__centro__cards">
-              <div class="principal__conteudo__centro__cards__card__1">
-                <div class="centro__conteudo__card__1">
-                  <h1 class="titulo__card__1">Postagens por dia</h1>
-                  <canvas id="grafico-postagens-dia"></canvas>
-                </div>
+          <div class="login__card__centro">
+            <h1 class="titulo__login">Log In</h1>
+            <p class="texto__login">
+              Insira seu e-mail e senha para acessar a plataforma.
+            </p>
+            <form class="formulario__login">
+              <label for="formularioEmail" class="formulario__label"
+                >E-mail*</label
+              ><br />
+              <input
+                id="formularioEmail"
+                type="text"
+                class="formulario__input"
+                placeholder="exemplo@newgate.pro"
+              /><br />
+              <label for="formularioSenha" class="formulario__label"
+                >Senha*</label
+              ><br />
+              <input
+                id="formularioSenha"
+                type="password"
+                class="formulario__input"
+                placeholder="Min. 8 caracteres"
+              />
+            </form>
+          </div>
+          <div class="login__card__rodape">
+            <div class="rodape__opcoes">
+              <div class="checkbox">
+                <label for="rodapeConexao" class="rodape__checkbox__label">
+                  <input
+                    type="checkbox"
+                    name="rodapeConexao"
+                    id="rodapeConexao"
+                    class="rodape__checkbox"
+                  />Mantenha-me conectado
+                </label>
               </div>
-              <div class="principal__conteudo__centro__cards__card__2">
-                <div class="centro__conteudo__card__2">
-                  
-                </div>
-              </div>
+              <a href="#" class="rodape__link">Esqueceu a senha?</a>
             </div>
+            <a href="pages/visaoGeral.html" class="rodape__botao">Sign In</a>
           </div>
         </div>
-      </section>
-
-      <section id="paginaFiltros" class="principal__filtros">
-        <div class="principal__filtros__conteudo">
-          <div class="principal__filtros__conteudo__topo">
-          <img
-            id="iconeRetorno"
-            src="assets/icons/Left.svg"
-            alt=""
-            class="principal__filtros__conteudo__imagemRetorno"
-            onmouseover="hoverBack();"
-            onmouseout="unhoverBack();"
-            onclick="closeFilter();"
-          />
-        </div>
-          <div class="principal__filtros__conteudo__centro">
-            <label for="inputData" class="filtro__conteudo__centro__titulo">Período</label><br>
-            <input id="inputData" type="text" placeholder="Selecione um período"/>
-            <div class="filtro__conteudo__centro__botoes">
-              <a href="#" class="botao__filtrar">
-                Filtrar
-              </a>
-              <a href="#" class="botao__limpaFiltros">
-                Limpar Filtros
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+      <div class="pagina__login__direita"></div>
     </main>
-
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/chartRender.js"></script>
   </body>
 </html>
