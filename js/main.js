@@ -15,6 +15,7 @@ function openNav() {
   document.getElementById("relatoriosTexto").style.display = "inline";
   document.getElementById("perfilUsuarioTexto").style.display = "inline";
   document.getElementById("configuracoesTexto").style.display = "inline";
+  document.getElementById("sairTexto").style.display = "inline";
 
   document.getElementById("logoBtn").style.margin = "10% 0 4% 0";
 
@@ -37,6 +38,7 @@ function closeNav() {
   document.getElementById("relatoriosTexto").style.display = "None";
   document.getElementById("perfilUsuarioTexto").style.display = "None";
   document.getElementById("configuracoesTexto").style.display = "None";
+  document.getElementById("sairTexto").style.display = "None";
 
   document.getElementById("logoBtn").style.margin = "25% 0 4% 0";
 
@@ -78,8 +80,7 @@ function unhoverBack() {
 }
 
 function closeFilter() {
-  document.getElementById("paginaFiltros").style.animation =
-    "0.3s fechaFiltros";
+  document.getElementById("paginaFiltros").style.animation = "0.3s fechaFiltros";
   document.getElementById("paginaFiltros").style.display = "none";
 }
 

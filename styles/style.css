@@ -82,13 +82,22 @@ hr {
 }
 
 .sidebar__link__img {
-    width: 27px;
+    width: 30px;
     padding: 10% 0;
     opacity: 30%;
 }
 
+.sidebar__link__img:hover {
+    opacity: 100%;
+}
+
 .current {
     opacity: 100%;
+}
+
+.no__click {
+    cursor: default;
+    pointer-events: none;
 }
 
 .sidebar__link__texto {
@@ -195,7 +204,7 @@ hr {
     margin: 2% 0 20% 5%;
     font-size: 14px;
     font-family: var(--fonte-merriweather);
-    width: fit-content;
+    width: 100%;
 }
 
 .card__texto {
