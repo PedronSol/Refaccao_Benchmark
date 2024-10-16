@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
     <title>Visão Geral</title>
   </head>
 
@@ -115,8 +116,8 @@
             <div class="principal__conteudo__cards__card">
               <div class="conteudo__cards">
                 <div class="esquerda__card">
-                  <h1 class="card__titulo">Total</h1>
-                  <p class="card__texto">1.9M</p>
+                  <h1 class="card__titulo">Total de Postagens</h1>
+                  <p class="card__texto">300</p>
                 </div>
                 <div class="direita__card">
                   <img src="../assets/Path 2.png" alt="" class="card__imagem" />
@@ -131,7 +132,7 @@
             <div class="principal__conteudo__cards__card">
               <div class="conteudo__cards">
                 <div class="esquerda__card">
-                  <h1 class="card__titulo">Negativos</h1>
+                  <h1 class="card__titulo">Desconstrutivas</h1>
                   <p class="card__texto">$41.2k</p>
                 </div>
                 <div class="direita__card">
@@ -147,7 +148,7 @@
             <div class="principal__conteudo__cards__card">
               <div class="conteudo__cards">
                 <div class="esquerda__card">
-                  <h1 class="card__titulo">Positivos</h1>
+                  <h1 class="card__titulo">Construtivas</h1>
                   <p class="card__texto">36.6k</p>
                 </div>
                 <div class="direita__card">
@@ -163,7 +164,7 @@
             <div class="principal__conteudo__cards__card">
               <div class="conteudo__cards">
                 <div class="esquerda__card">
-                  <h1 class="card__titulo">Neutros</h1>
+                  <h1 class="card__titulo">Neutras</h1>
                   <p class="card__texto">131.1k</p>
                 </div>
                 <div class="direita__card">
@@ -179,16 +180,22 @@
           </div>
           <div class="principal__conteudo__centro">
             <div class="principal__conteudo__centro__cards">
-              <div class="principal__conteudo__centro__cards__card__1">
-                <div class="centro__conteudo__card__1">
-                  <h1 class="titulo__card__1">Postagens por dia</h1>
-                  <canvas id="grafico-postagens-dia"></canvas>
+              <div class="principal__conteudo__centro__cards__card__graficoEstacadas">
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <h1 class="titulo__card__graficoEstacadas">Volume de Postagens por Rede</h1>
+                  <div class="graficoEstacadas">
+                    <canvas id="grafico-postagens-rede"></canvas>
+                  </div>
                 </div>
               </div>
-              <div class="principal__conteudo__centro__cards__card__2">
-                <div class="centro__conteudo__card__2">
-                  
+              <div class="principal__conteudo__centro__cards__card__graficoEstacadas">
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <h1 class="titulo__card__graficoEstacadas">Volume de Postagens por Gênero</h1>
+                  <div class="graficoEstacadas">
+                    <canvas id="grafico-postagens-genero"></canvas>
+                  </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>

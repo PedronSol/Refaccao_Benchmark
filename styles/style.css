@@ -226,7 +226,6 @@ hr {
 }
 
 .principal__conteudo__centro{
-    border: 1px solid blue;
     height: 70.5%;
     display: flex;
 }
@@ -240,30 +239,35 @@ hr {
     height: 100%;
 }
 
-.principal__conteudo__centro__cards__card__1{
+.principal__conteudo__centro__cards__card__graficoEstacadas{
     background-color: var(--branco);
-    width: 60%;
+    width: 49%;
     height: fit-content;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.centro__conteudo__card__1{
-    padding: 3% 5% 2% 1%;
-}
 
-.titulo__card__1{
-    margin-top: -2%;
-    margin-bottom: 4%;
+.titulo__card__graficoEstacadas{
+    padding: 1.5% 0 1.5% 2%;
+    border-bottom: 0.5px solid #cacaca;
+    margin-bottom: 2%;
     font-family: var(--fonte-merriweather);
     font-optical-sizing: auto;
-    font-size: 22px;
+    width: 98%;
+    font-size: 18px;
     font-weight: 700;
+    border-radius: 16px 16px 0 0;
+    background-color: #f0f0f0;
+}
+
+.graficoEstacadas{
+    padding: 1%;
 }
 
 .principal__conteudo__centro__cards__card__2{
-    width: 32%;
-    height: 90%;
+    width: 49%;
+    height: 70%;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     background-color: var(--branco);
