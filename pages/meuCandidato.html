@@ -12,7 +12,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
-    <title>Visão Geral</title>
+    <title>Meu Candidato</title>
   </head>
 
   <body>
@@ -29,23 +29,23 @@
         <a href="#" class="sidebar__link no__click">
           <img
             src="../assets/icons/Grid.png"
-            id="visaoGeralBtn"
+            id="meuCandidatoBtn"
             alt=""
             class="sidebar__link__img current"
           />
-          <span class="sidebar__link__texto" id="visaoGeralTexto"
-            >Visão Geral</span
+          <span class="sidebar__link__texto" id="meuCandidatoTexto"
+            >Meu Candidato</span
           >
         </a>
-        <a href="dashboards.html" class="sidebar__link">
+        <a href="benchmark.html" class="sidebar__link">
           <img
             src="../assets/icons/Pie Chart.png"
             alt=""
             class="sidebar__link__img"
-            id="dashboardsBtn"
+            id="benchmarkBtn"
           />
-          <span class="sidebar__link__texto" id="dashboardsTexto"
-            >Dashboards</span
+          <span class="sidebar__link__texto" id="benchmarkTexto"
+            >Benchmark</span
           >
         </a>
         <a href="relatorios.html" class="sidebar__link">
@@ -94,7 +94,7 @@
 
       <section id="principalConteudo" class="principal__conteudo">
         <div class="principal__conteudo__topo">
-          <h1 class="principal__conteudo__topo__titulo">Visão Geral</h1>
+          <h1 class="principal__conteudo__topo__titulo">Meu Candidato</h1>
           <a
             href="#"
             class="principal__conteudo__topo__filtros"
@@ -184,10 +184,10 @@
               <div
                 class="principal__conteudo__centro__cards__card__graficoEstacadas"
               >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Rede
+                </h1>
                 <div class="centro__conteudo__card__graficoEstacadas">
-                  <h1 class="titulo__card__graficoEstacadas">
-                    Volume de Postagens por Rede
-                  </h1>
                   <div class="graficoEstacadas">
                     <canvas id="grafico-postagens-rede"></canvas>
                   </div>
@@ -196,10 +196,10 @@
               <div
                 class="principal__conteudo__centro__cards__card__graficoEstacadas"
               >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Gênero
+                </h1>
                 <div class="centro__conteudo__card__graficoEstacadas">
-                  <h1 class="titulo__card__graficoEstacadas">
-                    Volume de Postagens por Gênero
-                  </h1>
                   <div class="graficoEstacadas">
                     <canvas id="grafico-postagens-genero"></canvas>
                   </div>
@@ -208,15 +208,35 @@
               <div
                 class="principal__conteudo__centro__cards__card__graficoEstacadasCheio"
               >
+                <h1 class="titulo__card__graficoEstacadasCheio">
+                  Volume de Postagens por Período de Tempo
+                </h1>
                 <div class="centro__conteudo__card__graficoEstacadasCheio">
-                  <h1 class="titulo__card__graficoEstacadasCheio">
-                    Volume de Postagens por Período de Tempo
-                  </h1>
                   <div class="graficoEstacadasCheio">
                     <canvas id="grafico-postagens-timeline"></canvas>
                   </div>
                 </div>
               </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoPizza"
+              >
+                <h1 class="titulo__card__graficoPizza">
+                  Volume de Postagens Área de Interesse
+                </h1>
+                <div class="centro__conteudo__card__graficoPizza">
+                  <div class="graficoPizza">
+                    <canvas id="grafico-pizza-desconstrutivo"></canvas>
+                  </div>
+                  <div class="graficoPizza">
+                    <canvas id="grafico-pizza-neutro"></canvas>
+                  </div>
+                  <div class="graficoPizza">
+                    <canvas id="grafico-pizza-construtivo"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- Lembrar de tirar isso pelo amor de Deus-->
+              <h1 style="color: transparent">Ola</h1>
             </div>
           </div>
         </div>
@@ -256,7 +276,7 @@
     <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
-    <script src="../js/datepicker.js"></script>
+    <!-- <script src="../js/datepicker.js"></script> -->
     <script src="../js/chartRender.js"></script>
   </body>
 </html>

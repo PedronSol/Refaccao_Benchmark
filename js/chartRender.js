@@ -162,12 +162,27 @@ var graficoPostagensTimeline = document
 new Chart(graficoPostagensTimeline, {
   type: "bar",
   data: {
-    labels: ["01/08/2024", "02/08/2024", "03/08/2024", "04/08/2024", "05/08/2024", "06/08/2024", "07/08/2024", "08/08/2024", "09/08/2024", "10/08/2024", "11/08/2024", "12/08/2024", "13/08/2024", "14/08/2024"],
+    labels: [
+      "01/08/2024",
+      "02/08/2024",
+      "03/08/2024",
+      "04/08/2024",
+      "05/08/2024",
+      "06/08/2024",
+      "07/08/2024",
+      "08/08/2024",
+      "09/08/2024",
+      "10/08/2024",
+      "11/08/2024",
+      "12/08/2024",
+      "13/08/2024",
+      "14/08/2024",
+    ],
     datasets: [
       {
         label: "Desconstrutivo",
         backgroundColor: "rgba(252,3,3,0.75)",
-        data: [63, 25, 12, 31, 9, 7, 42, 3, 12, 33, 2, 16, 1, 28]
+        data: [63, 25, 12, 31, 9, 7, 42, 3, 12, 33, 2, 16, 1, 28],
       },
       {
         label: "Neutro",
@@ -208,6 +223,136 @@ new Chart(graficoPostagensTimeline, {
           font: {
             size: 16,
             weight: 600,
+          },
+        },
+      },
+    },
+  },
+});
+
+var graficoPizzaDesconstrutivo = document.getElementById("grafico-pizza-desconstrutivo").getContext("2d");
+new Chart(graficoPizzaDesconstrutivo, {
+  type: "pie",
+  data: {
+    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
+    datasets: [
+      {
+        label: "Número de Postagens",
+        backgroundColor: [
+          "#3e95cd",
+          "#8e5ea2",
+          "#3cba9f",
+          "#e8c3b9",
+          "#c45850",
+        ],
+        data: [72, 56, 81, 15, 60],
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Desconstrutivas",
+        font: {
+          size: 20,
+        },
+      },
+      legend: {
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          font: {
+            size: 15,
+          },
+        },
+      },
+    },
+  },
+});
+
+var graficoPizzaNeutro = document.getElementById("grafico-pizza-neutro").getContext("2d");
+new Chart(graficoPizzaNeutro, {
+  type: "pie",
+  data: {
+    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
+    datasets: [
+      {
+        label: "Population (millions)",
+        backgroundColor: [
+          "#3e95cd",
+          "#8e5ea2",
+          "#3cba9f",
+          "#e8c3b9",
+          "#c45850",
+        ],
+        data: [20, 18, 15, 25, 28],
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Neutras",
+        font: {
+          size: 20,
+        },
+      },
+      legend: {
+        display: true,
+        position: "bottom",
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          font: {
+            size: 15,
+          },
+        },
+      },
+    },
+  },
+});
+
+var graficoPizzaConstrutivo = document.getElementById("grafico-pizza-construtivo").getContext("2d");
+new Chart(graficoPizzaConstrutivo, {
+  type: "pie",
+  data: {
+    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
+    datasets: [
+      {
+        label: "Population (millions)",
+        backgroundColor: [
+          "#3e95cd",
+          "#8e5ea2",
+          "#3cba9f",
+          "#e8c3b9",
+          "#c45850",
+        ],
+        data: [32, 45, 58, 37, 38],
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Construtivas",
+        font: {
+          size: 20,
+        },
+      },
+      legend: {
+        display: true,
+        position: "right",
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          font: {
+            size: 15,
           },
         },
       },

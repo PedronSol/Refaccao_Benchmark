@@ -10,8 +10,8 @@ function openNav() {
 
   document.getElementById("principalConteudo").style.marginLeft = "11%";
 
-  document.getElementById("visaoGeralTexto").style.display = "inline";
-  document.getElementById("dashboardsTexto").style.display = "inline";
+  document.getElementById("meuCandidatoTexto").style.display = "inline";
+  document.getElementById("benchmarkTexto").style.display = "inline";
   document.getElementById("relatoriosTexto").style.display = "inline";
   document.getElementById("perfilUsuarioTexto").style.display = "inline";
   document.getElementById("configuracoesTexto").style.display = "inline";
@@ -33,8 +33,8 @@ function closeNav() {
 
   document.getElementById("principalConteudo").style.marginLeft = "5%";
 
-  document.getElementById("visaoGeralTexto").style.display = "None";
-  document.getElementById("dashboardsTexto").style.display = "None";
+  document.getElementById("meuCandidatoTexto").style.display = "None";
+  document.getElementById("benchmarkTexto").style.display = "None";
   document.getElementById("relatoriosTexto").style.display = "None";
   document.getElementById("perfilUsuarioTexto").style.display = "None";
   document.getElementById("configuracoesTexto").style.display = "None";
