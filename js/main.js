@@ -62,8 +62,7 @@ function unhoverFilter() {
 }
 
 function openFilter() {
-  document.getElementById("paginaFiltros").style.animation =
-    "0.3s mostraFiltros";
+  document.getElementById("paginaFiltros").style.animation = "0.3s mostraFiltros";
   document.getElementById("paginaFiltros").style.display = "flex";
 }
 

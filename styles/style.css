@@ -41,7 +41,6 @@ ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display,
 
 body {
     background-color: var(--branco-background);
-    height: 100vh;
 }
 
 .principal {
@@ -265,12 +264,38 @@ hr {
     padding: 1%;
 }
 
-.principal__conteudo__centro__cards__card__2{
-    width: 49%;
-    height: 70%;
+.principal__conteudo__centro__cards__card__graficoEstacadasCheio{
+    background-color: var(--branco);
+    width: 100%;
+    height: fit-content;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: var(--branco);
+    margin: 2% 0;
+}
+
+.centro__conteudo__card__graficoEstacadasCheio {
+    height: 100%;
+}
+
+.titulo__card__graficoEstacadasCheio{
+    padding: 1.5% 0 1.5% 2%;
+    border-bottom: 0.5px solid #cacaca;
+    margin-bottom: 2%;
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    width: 98%;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 16px 16px 0 0;
+    background-color: #f0f0f0;
+}
+
+.graficoEstacadasCheio{
+    padding: 1%;
+    height: 400px;
+}
+
+.rodape {
     border: 1px solid red;
 }
 

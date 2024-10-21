@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
     <title>Visão Geral</title>
@@ -85,9 +88,7 @@
             class="sidebar__link__img"
             id="configuracoesBtn"
           />
-          <span class="sidebar__link__texto" id="sairTexto"
-            >Sair</span
-          >
+          <span class="sidebar__link__texto" id="sairTexto">Sair</span>
         </a>
       </aside>
 
@@ -117,7 +118,7 @@
               <div class="conteudo__cards">
                 <div class="esquerda__card">
                   <h1 class="card__titulo">Total de Postagens</h1>
-                  <p class="card__texto">300</p>
+                  <p class="card__texto" id="cardTotalPostagens">0</p>
                 </div>
                 <div class="direita__card">
                   <img src="../assets/Path 2.png" alt="" class="card__imagem" />
@@ -133,7 +134,7 @@
               <div class="conteudo__cards">
                 <div class="esquerda__card">
                   <h1 class="card__titulo">Desconstrutivas</h1>
-                  <p class="card__texto">142</p>
+                  <p class="card__texto" id="cardPostagensDesconstrutivas">0</p>
                 </div>
                 <div class="direita__card">
                   <img src="../assets/bars.png" alt="" class="card__imagem" />
@@ -149,7 +150,7 @@
               <div class="conteudo__cards">
                 <div class="esquerda__card">
                   <h1 class="card__titulo">Neutras</h1>
-                  <p class="card__texto">53</p>
+                  <p class="card__texto" id="cardPostagensNeutras">0</p>
                 </div>
                 <div class="direita__card">
                   <img src="../assets/bars.png" alt="" class="card__imagem" />
@@ -165,7 +166,7 @@
               <div class="conteudo__cards">
                 <div class="esquerda__card">
                   <h1 class="card__titulo">Construtivas</h1>
-                  <p class="card__texto">105</p>
+                  <p class="card__texto" id="cardPostagensConstrutivas">0</p>
                 </div>
                 <div class="direita__card">
                   <img src="../assets/bars.png" alt="" class="card__imagem" />
@@ -180,22 +181,41 @@
           </div>
           <div class="principal__conteudo__centro">
             <div class="principal__conteudo__centro__cards">
-              <div class="principal__conteudo__centro__cards__card__graficoEstacadas">
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
                 <div class="centro__conteudo__card__graficoEstacadas">
-                  <h1 class="titulo__card__graficoEstacadas">Volume de Postagens por Rede</h1>
+                  <h1 class="titulo__card__graficoEstacadas">
+                    Volume de Postagens por Rede
+                  </h1>
                   <div class="graficoEstacadas">
                     <canvas id="grafico-postagens-rede"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="principal__conteudo__centro__cards__card__graficoEstacadas">
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
                 <div class="centro__conteudo__card__graficoEstacadas">
-                  <h1 class="titulo__card__graficoEstacadas">Volume de Postagens por Gênero</h1>
+                  <h1 class="titulo__card__graficoEstacadas">
+                    Volume de Postagens por Gênero
+                  </h1>
                   <div class="graficoEstacadas">
                     <canvas id="grafico-postagens-genero"></canvas>
                   </div>
                 </div>
               </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadasCheio"
+              >
+                <div class="centro__conteudo__card__graficoEstacadasCheio">
+                  <h1 class="titulo__card__graficoEstacadasCheio">
+                    Volume de Postagens por Período de Tempo
+                  </h1>
+                  <div class="graficoEstacadasCheio">
+                    <canvas id="grafico-postagens-timeline"></canvas>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -205,26 +225,28 @@
       <section id="paginaFiltros" class="principal__filtros">
         <div class="principal__filtros__conteudo">
           <div class="principal__filtros__conteudo__topo">
-          <img
-            id="iconeRetorno"
-            src="../assets/icons/Left.svg"
-            alt=""
-            class="principal__filtros__conteudo__imagemRetorno"
-            onmouseover="hoverBack();"
-            onmouseout="unhoverBack();"
-            onclick="closeFilter();"
-          />
-        </div>
+            <img
+              id="iconeRetorno"
+              src="../assets/icons/Left.svg"
+              alt=""
+              class="principal__filtros__conteudo__imagemRetorno"
+              onmouseover="hoverBack();"
+              onmouseout="unhoverBack();"
+              onclick="closeFilter();"
+            />
+          </div>
           <div class="principal__filtros__conteudo__centro">
-            <label for="inputData" class="filtro__conteudo__centro__titulo">Período</label><br>
-            <input id="inputData" type="text" placeholder="Selecione um período"/>
+            <label for="inputData" class="filtro__conteudo__centro__titulo"
+              >Período</label
+            ><br />
+            <input
+              id="inputData"
+              type="text"
+              placeholder="Selecione um período"
+            />
             <div class="filtro__conteudo__centro__botoes">
-              <a href="#" class="botao__filtrar">
-                Filtrar
-              </a>
-              <a href="#" class="botao__limpaFiltros">
-                Limpar Filtros
-              </a>
+              <a href="#" class="botao__filtrar"> Filtrar </a>
+              <a href="#" class="botao__limpaFiltros"> Limpar Filtros </a>
             </div>
           </div>
         </div>
