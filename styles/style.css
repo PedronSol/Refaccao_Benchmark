@@ -15,8 +15,8 @@ ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display,
     --azul-escuro-newgate: #094bd8;
 }
 
-a:visited {
-    color: inherit
+a{
+    color: black
 }
 
 @keyframes mostraFiltros {
@@ -250,6 +250,7 @@ hr {
     height: fit-content;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2%;
 }
 
 
@@ -276,7 +277,7 @@ hr {
     height: fit-content;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 2% 0;
+    margin-bottom: 2%;
 }
 
 .centro__conteudo__card__graficoEstacadasCheio {

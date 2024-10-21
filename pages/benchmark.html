@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
     <title>Benchmark</title>
   </head>
 
   <body>
     <main class="principal">
       <aside id="minhaSidebar" class="sidebar">
-        <button href="#" type="button" id="logoBtn" class="sidebar__btn" onclick="decideNav()">
+        <button
+          href="#"
+          type="button"
+          id="logoBtn"
+          class="sidebar__btn"
+          onclick="decideNav()"
+        >
           <img
             src="../assets/Logo_Newgate_Pequena.png"
             id="logoImg"
@@ -35,7 +47,7 @@
           <img
             src="../assets/icons/Pie Chart.png"
             alt=""
-            class="sidebar__link__img  current"
+            class="sidebar__link__img current"
             id="benchmarkBtn"
           />
           <span class="sidebar__link__texto" id="benchmarkTexto"
@@ -82,17 +94,203 @@
             class="sidebar__link__img"
             id="configuracoesBtn"
           />
-          <span class="sidebar__link__texto" id="sairTexto"
-            >Sair</span
-          >
+          <span class="sidebar__link__texto" id="sairTexto">Sair</span>
         </a>
       </aside>
 
       <section id="principalConteudo" class="principal__conteudo">
-        <h1 class="principal__conteudo__topo__titulo">Benchmark</h1>
+        <div class="principal__conteudo__topo">
+          <h1 class="principal__conteudo__topo__titulo">Benchmark</h1>
+          <a
+            href="#"
+            class="principal__conteudo__topo__filtros"
+            onmouseover="hoverFilter();"
+            onmouseout="unhoverFilter();"
+            onclick="openFilter();"
+          >
+            <img
+              id="imagemFunil"
+              src="../assets/icons/funilFiltros.png"
+              alt="Icone de um funil"
+            />
+            <span class="principal__conteudo__topo__filtros__texto"
+              >Filtros</span
+            >
+          </a>
+        </div>
+        <div class="principal__conteudo__baixo">
+          <div class="principal__conteudo__cards">
+            <div class="principal__conteudo__cards__card">
+              <div class="conteudo__cards">
+                <div class="esquerda__card">
+                  <h1 class="card__titulo">Paulinho</h1>
+                  <p class="card__texto" id="">0</p>
+                </div>
+                <div class="direita__card">
+                  <img src="../assets/bars.png" alt="" class="card__imagem" />
+                </div>
+              </div>
+              <img
+                src="../assets/Horizontal.png"
+                alt=""
+                class="divisoria__cards"
+              />
+            </div>
+            <div class="principal__conteudo__cards__card">
+              <div class="conteudo__cards">
+                <div class="esquerda__card">
+                  <h1 class="card__titulo">Carlos Eduardo</h1>
+                  <p class="card__texto" id="">0</p>
+                </div>
+                <div class="direita__card">
+                  <img src="../assets/bars.png" alt="" class="card__imagem" />
+                </div>
+              </div>
+              <img
+                src="../assets/Horizontal.png"
+                alt=""
+                class="divisoria__cards"
+              />
+            </div>
+            <div class="principal__conteudo__cards__card">
+              <div class="conteudo__cards">
+                <div class="esquerda__card">
+                  <h1 class="card__titulo">Natália Bonavides</h1>
+                  <p class="card__texto" id="">0</p>
+                </div>
+                <div class="direita__card">
+                  <img src="../assets/bars.png" alt="" class="card__imagem" />
+                </div>
+              </div>
+              <img
+                src="../assets/Horizontal.png"
+                alt=""
+                class="divisoria__cards"
+              />
+            </div>
+          </div>
+          <div class="principal__conteudo__centro">
+            <div class="principal__conteudo__centro__cards">
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Rede
+                </h1>
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <div class="graficoEstacadas">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Gênero
+                </h1>
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <div class="graficoEstacadas">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Rede
+                </h1>
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <div class="graficoEstacadas">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadas"
+              >
+                <h1 class="titulo__card__graficoEstacadas">
+                  Volume de Postagens por Gênero
+                </h1>
+                <div class="centro__conteudo__card__graficoEstacadas">
+                  <div class="graficoEstacadas">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoEstacadasCheio"
+              >
+                <h1 class="titulo__card__graficoEstacadasCheio">
+                  Volume de Postagens por Período de Tempo
+                </h1>
+                <div class="centro__conteudo__card__graficoEstacadasCheio">
+                  <div class="graficoEstacadasCheio">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="principal__conteudo__centro__cards__card__graficoPizza"
+              >
+                <h1 class="titulo__card__graficoPizza">
+                  Volume de Postagens Área de Interesse
+                </h1>
+                <div class="centro__conteudo__card__graficoPizza">
+                  <div class="graficoPizza">
+                    <canvas id=""></canvas>
+                  </div>
+                  <div class="graficoPizza">
+                    <canvas id=""></canvas>
+                  </div>
+                  <div class="graficoPizza">
+                    <canvas id=""></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- Lembrar de tirar isso pelo amor de Deus-->
+              <h1 style="color: transparent">Ola</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paginaFiltros" class="principal__filtros">
+        <div class="principal__filtros__conteudo">
+          <div class="principal__filtros__conteudo__topo">
+            <img
+              id="iconeRetorno"
+              src="../assets/icons/Left.svg"
+              alt=""
+              class="principal__filtros__conteudo__imagemRetorno"
+              onmouseover="hoverBack();"
+              onmouseout="unhoverBack();"
+              onclick="closeFilter();"
+            />
+          </div>
+          <div class="principal__filtros__conteudo__centro">
+            <label for="inputData" class="filtro__conteudo__centro__titulo"
+              >Período</label
+            ><br />
+            <input
+              id="inputData"
+              type="text"
+              placeholder="Selecione um período"
+            />
+            <div class="filtro__conteudo__centro__botoes">
+              <a href="#" class="botao__filtrar"> Filtrar </a>
+              <a href="#" class="botao__limpaFiltros"> Limpar Filtros </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="../js/datepicker.js"></script>
+    <script src="../js/Graficos/graficosBenchmark.js"></script>
   </body>
 </html>

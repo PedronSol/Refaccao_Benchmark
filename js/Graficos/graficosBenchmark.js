@@ -62,6 +62,7 @@ new Chart(graficoPostagensRede, {
     ],
   },
   options: {
+    borderRadius: 8,
     plugins: {
       title: {
         display: false,
@@ -122,12 +123,20 @@ new Chart(graficoPostagensGenero, {
     ],
   },
   options: {
+    borderRadius: 8,
     plugins: {
       title: {
         display: false,
       },
       legend: {
         display: true,
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          font: {
+            size: 15,
+          },
+        },
       },
     },
     scales: {
@@ -197,12 +206,20 @@ new Chart(graficoPostagensTimeline, {
     ],
   },
   options: {
+    borderRadius: 8,
     plugins: {
       title: {
         display: false,
       },
       legend: {
         display: true,
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          font: {
+            size: 15,
+          },
+        },
       },
     },
     maintainAspectRatio: false,
@@ -211,7 +228,7 @@ new Chart(graficoPostagensTimeline, {
         stacked: true,
         ticks: {
           font: {
-            size: 16,
+            size: 15,
           },
         },
       },
@@ -221,7 +238,7 @@ new Chart(graficoPostagensTimeline, {
           display: true,
           text: "Postagens",
           font: {
-            size: 16,
+            size: 15,
             weight: 600,
           },
         },
@@ -230,6 +247,7 @@ new Chart(graficoPostagensTimeline, {
   },
 });
 
+//Gráficos de Pizza
 var graficoPizzaDesconstrutivo = document.getElementById("grafico-pizza-desconstrutivo").getContext("2d");
 new Chart(graficoPizzaDesconstrutivo, {
   type: "pie",
