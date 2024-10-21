@@ -15,6 +15,10 @@ ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display,
     --azul-escuro-newgate: #094bd8;
 }
 
+a:visited {
+    color: inherit
+}
+
 @keyframes mostraFiltros {
     from {
         width: 0%;
@@ -63,6 +67,8 @@ body {
 
 .sidebar__btn {
     margin: 25% 0 4% 0;
+    background-color: transparent;
+    border: none;
 }
 
 hr {
