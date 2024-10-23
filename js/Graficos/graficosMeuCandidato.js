@@ -77,6 +77,7 @@ new Chart(graficoPostagensRede, {
         ticks: {
           font: {
             size: 16,
+            weight: 600
           },
         },
       },
@@ -145,6 +146,7 @@ new Chart(graficoPostagensGenero, {
         ticks: {
           font: {
             size: 16,
+            weight: 600
           },
         },
       },

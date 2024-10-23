@@ -1,63 +1,74 @@
-// Dados do gráfico de redes
-var dadosRedesInstagram = [94, 46, 60];
-var dadosRedesTwitter = [144, 18, 38];
-var dadosRedesFacebook = [46, 42, 112];
+// Dados do gráfico de autoria do candidato
+var dadosAutoriaPaulinho = [6,2,85];
+var dadosAutoriaNatalia = [22,20,149];
+var dadosAutoriaCarlos = [6,3,44];
 
-//Dados do gráfico de Gênero
-var dadosGeneroMasculino = [44, 38, 118];
-var dadosGeneroNA = [34, 124, 22];
-var dadosGeneroFeminino = [98, 64, 38];
+//Dados do gráfico de autoria de terceiros
+var dadosTerceirosPaulinho = [485,95,290];
+var dadosTerceirosNatalia = [65,68,318];
+var dadosTerceirosCarlos = [74,51,103];
 
 //Dados do total de postagens
-var totalDesconstrutivas =
-  dadosRedesInstagram[0] + dadosRedesTwitter[0] + dadosRedesFacebook[0];
-var totalNeutras =
-  dadosRedesInstagram[1] + dadosRedesTwitter[1] + dadosRedesFacebook[1];
-var totalConstrutivas =
-  dadosRedesInstagram[2] + dadosRedesTwitter[2] + dadosRedesFacebook[2];
-var totalPostagens = totalConstrutivas + totalNeutras + totalDesconstrutivas;
+var totalPaulinho = 0;
+for (i = 0; i < dadosAutoriaPaulinho.length; i++){
+totalPaulinho += dadosAutoriaPaulinho[i];
+};
+for (i = 0; i < dadosTerceirosPaulinho.length; i++){
+totalPaulinho += dadosTerceirosPaulinho[i];
+};
+
+var totalNatalia = 0;
+for (i = 0; i < dadosAutoriaNatalia.length; i++){
+totalNatalia += dadosAutoriaNatalia[i];
+};
+for (i = 0; i < dadosTerceirosNatalia.length; i++){
+totalNatalia += dadosTerceirosNatalia[i];
+};
+
+var totalCarlos = 0;
+for (i = 0; i < dadosAutoriaCarlos.length; i++){
+totalCarlos += dadosAutoriaCarlos[i];
+};
+for (i = 0; i < dadosTerceirosCarlos.length; i++){
+totalCarlos += dadosTerceirosCarlos[i];
+};
 
 //Dados dos cards do topo da página principal
-var cardTotalPostagens = document.getElementById("cardTotalPostagens");
-cardTotalPostagens.textContent = totalPostagens;
+var cardTotalPaulinho = document.getElementById("cardTotalPaulinho");
+cardTotalPaulinho.textContent = totalPaulinho;
 
-var cardPostagensDesconstrutivas = document.getElementById(
-  "cardPostagensDesconstrutivas"
+var cardTotalNatalia = document.getElementById("cardTotalNatalia");
+cardTotalNatalia.textContent = totalNatalia;
+
+var cardTotalCarlos = document.getElementById(
+  "cardTotalCarlos"
 );
-cardPostagensDesconstrutivas.textContent = totalDesconstrutivas;
+cardTotalCarlos.textContent = totalCarlos;
 
-var cardPostagensNeutras = document.getElementById("cardPostagensNeutras");
-cardPostagensNeutras.textContent = totalNeutras;
-
-var cardPostagensConstrutivas = document.getElementById(
-  "cardPostagensConstrutivas"
-);
-cardPostagensConstrutivas.textContent = totalConstrutivas;
-
-//Gráfico do volume de postagens por rede
-var graficoPostagensRede = document
-  .getElementById("grafico-postagens-rede")
+//Grafico de Volume de Postagens com Autoria do Candidato
+var graficoPostagensCandidato = document
+  .getElementById("grafico-postagens-candidato")
   .getContext("2d");
 
-new Chart(graficoPostagensRede, {
+new Chart(graficoPostagensCandidato, {
   type: "bar",
   data: {
-    labels: ["Desconstrutivas", "Neutras", "Construtivas"],
+    labels: ["Paulinho Freire", "Carlos Eduardo", "Natália Bonavides"],
     datasets: [
       {
-        label: "Instagram",
-        backgroundColor: "rgba(193,53,132,0.75)",
-        data: dadosRedesInstagram,
+        label: "Desconstrutivas",
+        backgroundColor: "rgba(255, 99, 132, 0.7)",
+        data: [dadosAutoriaPaulinho[0], dadosAutoriaCarlos[0], dadosAutoriaNatalia[0]],
       },
       {
-        label: "Twitter/X",
-        backgroundColor: "rgba(2,161,242,0.75)",
-        data: dadosRedesTwitter,
+        label: "Neutras",
+        backgroundColor: "rgba(255, 206, 86, 0.7)",
+        data: [dadosAutoriaPaulinho[1], dadosAutoriaCarlos[1], dadosAutoriaNatalia[1]],
       },
       {
-        label: "Facebook",
-        backgroundColor: "rgba(66,103,178,0.75)",
-        data: dadosRedesFacebook,
+        label: "Construtivas",
+        backgroundColor: "rgba(75, 192, 192, 0.7)",
+        data: [dadosAutoriaPaulinho[2], dadosAutoriaCarlos[2], dadosAutoriaNatalia[2]],
       },
     ],
   },
@@ -66,267 +77,31 @@ new Chart(graficoPostagensRede, {
     plugins: {
       title: {
         display: false,
-      },
-      legend: {
-        display: false,
-      },
-    },
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 16,
-          },
-        },
-      },
-      y: {
-        stacked: true,
-        title: {
-          display: true,
-          text: "Postagens",
-          font: {
-            size: 16,
-            weight: 600,
-          },
-        },
-      },
-    },
-  },
-});
-
-//Gráfico do volume de postagens por gênero
-var graficoPostagensGenero = document
-  .getElementById("grafico-postagens-genero")
-  .getContext("2d");
-
-new Chart(graficoPostagensGenero, {
-  type: "bar",
-  data: {
-    labels: ["Desconstrutivas", "Neutras", "Construtivas"],
-    datasets: [
-      {
-        label: "Masculino",
-        backgroundColor: "rgba(23,54,255,0.75)",
-        data: dadosGeneroMasculino,
-      },
-      {
-        label: "N/A",
-        backgroundColor: "rgba(196, 204, 255,0.75)",
-        data: dadosGeneroNA,
-      },
-      {
-        label: "Feminino",
-        backgroundColor: "rgba(245,66,152,0.75)",
-        data: dadosGeneroFeminino,
-      },
-    ],
-  },
-  options: {
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: false,
-      },
-      legend: {
-        display: true,
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
-          font: {
-            size: 15,
-          },
-        },
-      },
-    },
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 16,
-          },
-        },
-      },
-      y: {
-        stacked: true,
-        title: {
-          display: true,
-          text: "Postagens",
-          font: {
-            size: 16,
-            weight: 600,
-          },
-        },
-      },
-    },
-  },
-});
-
-//Gráfico da timeline de postagens
-var graficoPostagensTimeline = document
-  .getElementById("grafico-postagens-timeline")
-  .getContext("2d");
-
-new Chart(graficoPostagensTimeline, {
-  type: "bar",
-  data: {
-    labels: [
-      "01/08/2024",
-      "02/08/2024",
-      "03/08/2024",
-      "04/08/2024",
-      "05/08/2024",
-      "06/08/2024",
-      "07/08/2024",
-      "08/08/2024",
-      "09/08/2024",
-      "10/08/2024",
-      "11/08/2024",
-      "12/08/2024",
-      "13/08/2024",
-      "14/08/2024",
-    ],
-    datasets: [
-      {
-        label: "Desconstrutivo",
-        backgroundColor: "rgba(252,3,3,0.75)",
-        data: [63, 25, 12, 31, 9, 7, 42, 3, 12, 33, 2, 16, 1, 28],
-      },
-      {
-        label: "Neutro",
-        backgroundColor: "rgba(163,162,166,0.75)",
-        data: [5, 14, 22, 3, 7, 2, 10, 10, 3, 5, 4, 9, 2, 10],
-      },
-      {
-        label: "Construtivo",
-        backgroundColor: "rgba(23,252,3,0.75)",
-        data: [6, 20, 12, 11, 16, 2, 22, 3, 12, 2, 47, 16, 33, 8],
-      },
-    ],
-  },
-  options: {
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: false,
-      },
-      legend: {
-        display: true,
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
-          font: {
-            size: 15,
-          },
-        },
-      },
-    },
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 15,
-          },
-        },
-      },
-      y: {
-        stacked: true,
-        title: {
-          display: true,
-          text: "Postagens",
-          font: {
-            size: 15,
-            weight: 600,
-          },
-        },
-      },
-    },
-  },
-});
-
-//Gráficos de Pizza
-var graficoPizzaDesconstrutivo = document.getElementById("grafico-pizza-desconstrutivo").getContext("2d");
-new Chart(graficoPizzaDesconstrutivo, {
-  type: "pie",
-  data: {
-    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
-    datasets: [
-      {
-        label: "Número de Postagens",
-        backgroundColor: [
-          "#3e95cd",
-          "#8e5ea2",
-          "#3cba9f",
-          "#e8c3b9",
-          "#c45850",
-        ],
-        data: [72, 56, 81, 15, 60],
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    plugins: {
-      title: {
-        display: true,
-        text: "Desconstrutivas",
-        font: {
-          size: 20,
-        },
-      },
-      legend: {
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
-          font: {
-            size: 15,
-          },
-        },
-      },
-    },
-  },
-});
-
-var graficoPizzaNeutro = document.getElementById("grafico-pizza-neutro").getContext("2d");
-new Chart(graficoPizzaNeutro, {
-  type: "pie",
-  data: {
-    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
-    datasets: [
-      {
-        label: "Population (millions)",
-        backgroundColor: [
-          "#3e95cd",
-          "#8e5ea2",
-          "#3cba9f",
-          "#e8c3b9",
-          "#c45850",
-        ],
-        data: [20, 18, 15, 25, 28],
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    plugins: {
-      title: {
-        display: true,
-        text: "Neutras",
-        font: {
-          size: 20,
-        },
       },
       legend: {
         display: true,
         position: "bottom",
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
+        align: "start"
+      },
+    },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: {
           font: {
-            size: 15,
+            size: 16,
+            weight: 600
+          },
+        },
+      },
+      y: {
+        stacked: true,
+        title: {
+          display: true,
+          text: "Postagens",
+          font: {
+            size: 16,
+            weight: 600,
           },
         },
       },
@@ -334,43 +109,61 @@ new Chart(graficoPizzaNeutro, {
   },
 });
 
-var graficoPizzaConstrutivo = document.getElementById("grafico-pizza-construtivo").getContext("2d");
-new Chart(graficoPizzaConstrutivo, {
-  type: "pie",
+//Grafico de Volume de Postagens com Autoria de Terceiros
+var graficoPostagensTerceiros = document
+  .getElementById("grafico-postagens-terceiros")
+  .getContext("2d");
+
+new Chart(graficoPostagensTerceiros, {
+  type: "bar",
   data: {
-    labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
+    labels: ["Paulinho Freire", "Carlos Eduardo", "Natália Bonavides"],
     datasets: [
       {
-        label: "Population (millions)",
-        backgroundColor: [
-          "#3e95cd",
-          "#8e5ea2",
-          "#3cba9f",
-          "#e8c3b9",
-          "#c45850",
-        ],
-        data: [32, 45, 58, 37, 38],
+        label: "Desconstrutivas",
+        backgroundColor: "rgba(255, 99, 132, 0.7)",
+        data: [dadosTerceirosPaulinho[0], dadosTerceirosCarlos[0], dadosTerceirosNatalia[0]],
+      },
+      {
+        label: "Neutras",
+        backgroundColor: "rgba(255, 206, 86, 0.7)",
+        data: [dadosTerceirosPaulinho[1], dadosTerceirosCarlos[1], dadosTerceirosNatalia[1]],
+      },
+      {
+        label: "Construtivas",
+        backgroundColor: "rgba(75, 192, 192, 0.7)",
+        data: [dadosTerceirosPaulinho[2], dadosTerceirosCarlos[2], dadosTerceirosNatalia[2]],
       },
     ],
   },
   options: {
-    maintainAspectRatio: false,
+    borderRadius: 8,
     plugins: {
       title: {
-        display: true,
-        text: "Construtivas",
-        font: {
-          size: 20,
-        },
+        display: false,
       },
       legend: {
-        display: true,
-        position: "right",
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: {
           font: {
-            size: 15,
+            size: 16,
+            weight: 600
+          },
+        },
+      },
+      y: {
+        stacked: true,
+        title: {
+          display: true,
+          text: "Postagens",
+          font: {
+            size: 16,
+            weight: 600,
           },
         },
       },
