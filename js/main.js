@@ -1,4 +1,5 @@
 var isNavOpen = false;
+var checkboxSelecionado = false;
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
@@ -62,7 +63,8 @@ function unhoverFilter() {
 }
 
 function openFilter() {
-  document.getElementById("paginaFiltros").style.animation = "0.3s mostraFiltros";
+  document.getElementById("paginaFiltros").style.animation =
+    "0.3s mostraFiltros";
   document.getElementById("paginaFiltros").style.display = "flex";
 }
 
@@ -79,7 +81,8 @@ function unhoverBack() {
 }
 
 function closeFilter() {
-  document.getElementById("paginaFiltros").style.animation = "0.3s fechaFiltros";
+  document.getElementById("paginaFiltros").style.animation =
+    "0.3s fechaFiltros";
   document.getElementById("paginaFiltros").style.display = "none";
 }
 
@@ -88,5 +91,15 @@ function decideNav() {
     closeNav();
   } else {
     openNav();
+  }
+}
+
+function selecionaCheckbox() {
+  if (checkboxSelecionado == false) {
+    document.getElementById("checkbox-customizado").classList.add("checked");
+    checkboxSelecionado = true;
+  } else {
+    document.getElementById("checkbox-customizado").classList.remove("checked");
+    checkboxSelecionado = false;
   }
 }

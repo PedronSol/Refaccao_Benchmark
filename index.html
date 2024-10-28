@@ -56,8 +56,12 @@
                     name="rodapeConexao"
                     id="rodapeConexao"
                     class="rodape__checkbox"
-                  />Mantenha-me conectado
+                    aria-label="checkbox"
+                    onclick="selecionaCheckbox()"
+                  />
+                  <div class="checkbox__customizado" id="checkbox-customizado"></div>
                 </label>
+                <p class="texto__checkbox">Mantenha-me conectado</p>
               </div>
               <a href="#" class="rodape__link">Esqueceu a senha?</a>
             </div>
@@ -68,5 +72,6 @@
       <div class="pagina__login__direita">
       </div>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
