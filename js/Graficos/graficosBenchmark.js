@@ -623,6 +623,18 @@ new Chart(graficoPostagensRedeInstagramTerceiros, {
 });
 
 //Graficos de Linha Do Volume de Postagens por Período de Tempo com Autoria do Candidato
+var gradientNatalia = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
+gradientNatalia.addColorStop(0, 'rgba(245, 90, 66, 1)');   
+gradientNatalia.addColorStop(1, 'rgba(245, 90, 66, 0.05)');
+
+var gradientCarlosEduardo = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
+gradientCarlosEduardo.addColorStop(0, 'rgba(102, 245, 66, 1)');   
+gradientCarlosEduardo.addColorStop(1, 'rgba(102, 245, 66, 0.05)');
+
+var gradientPaulinho = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
+gradientPaulinho.addColorStop(0, 'rgba(66, 93, 245, 1)');   
+gradientPaulinho.addColorStop(1, 'rgba(66, 93, 245, 0.05)');
+
 new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
   type: "line",
   data: {
@@ -647,6 +659,13 @@ new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
     ],
     datasets: [
       {
+        data: datasCandidatoNatalia,
+        label: "Natália",
+        borderColor: "#f55a42",
+        fill: false,
+        tension: 0.3,
+      },
+      {
         data: datasCandidatoPaulinho,
         label: "Paulinho",
         borderColor: "#425df5",
@@ -659,14 +678,7 @@ new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
         borderColor: "#66f542",
         fill: false,
         tension: 0.3,
-      },
-      {
-        data: datasCandidatoNatalia,
-        label: "Natália",
-        borderColor: "#f55a42",
-        fill: false,
-        tension: 0.3,
-      },
+      }
     ],
   },
   options: {
@@ -713,25 +725,28 @@ new Chart(document.getElementById("grafico-postagens-tempo-terceiros"), {
         data: datasTerceirosPaulinho,
         label: "Paulinho",
         borderColor: "#425df5",
-        backgroundColor: "rgba(66, 93, 245, 0.08)",
+        backgroundColor: gradientPaulinho,
         fill: true,
         tension: 0.3,
+        order: 3,
       },
       {
         data: datasTerceirosCarlos,
         label: "Carlos Eduardo",
         borderColor: "#66f542",
-        backgroundColor: "rgba(102, 245, 66, 0.08)",
+        backgroundColor: gradientCarlosEduardo,
         fill: true,
         tension: 0.3,
+        order: 1,
       },
       {
         data: datasTerceirosNatalia,
         label: "Natália",
         borderColor: "#f55a42",
-        backgroundColor: "rgba(245, 90, 66, 0.08)",
+        backgroundColor: gradientNatalia,
         fill: true,
         tension: 0.3,
+        order: 2,
       },
     ],
   },
