@@ -190,7 +190,17 @@ hr {
 .principal__conteudo__cards__card {
     display: flex;
     background-color: var(--branco);
-    width: 22%;
+    width: 23%;
+    height: 80%;
+    border-radius: 16px;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.principal__conteudo__cards__card__benchmark {
+    display: flex;
+    background-color: var(--branco);
+    width: 32%;
     height: 80%;
     border-radius: 16px;
     flex-direction: column;

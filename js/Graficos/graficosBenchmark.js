@@ -120,6 +120,8 @@ new Chart(graficoPostagensCandidato, {
   },
   options: {
     borderRadius: 8,
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       title: {
         display: false,
@@ -196,6 +198,8 @@ new Chart(graficoPostagensTerceiros, {
   },
   options: {
     borderRadius: 8,
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       title: {
         display: false,
