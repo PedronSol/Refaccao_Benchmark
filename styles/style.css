@@ -1,7 +1,5 @@
 /* 
 TODO - Fazer media queries para mudança do tamanho dos textos e para que as imagens desapareçam ao atingir um certo tamanho limite (será necessário testear esse tamanho)
-
-ONDE PAREI - No desenvolvimento do centro da página. Ainda não possui display, margens ou nenhuma estilização relevante, mas já possui classes e está delimitado por uma borda azul.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -56,6 +54,7 @@ body {
     background-color: var(--branco);
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 8px 1%;
     width: 4%;
     height: 100vh;
@@ -69,6 +68,10 @@ body {
     margin: 25% 0 4% 0;
     background-color: transparent;
     border: none;
+}
+
+#logoImg {
+    width: 100%;
 }
 
 hr {
@@ -112,6 +115,15 @@ hr {
     font-weight: 700;
     font-style: normal;
     margin-left: 10px;
+    display: none;
+}
+
+.copyright__sidebar {
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 12px;
+    margin-top: 180%;
+    text-align: center;
     display: none;
 }
 
@@ -247,7 +259,7 @@ hr {
 .principal__conteudo__centro__cards__card__graficoEstacadas{
     background-color: var(--branco);
     width: 49%;
-    height: fit-content;
+    height: 70%;
     border-radius: 16px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 2%;
@@ -267,8 +279,13 @@ hr {
     background-color: #f0f0f0;
 }
 
+.centro__conteudo__card__graficoEstacadas{
+    height: 82%;
+}
+
 .graficoEstacadas{
-    padding: 1%;
+    padding: 2%;
+    height: 100%;
 }
 
 .principal__conteudo__centro__cards__card__graficoEstacadasCheio{
@@ -418,7 +435,16 @@ hr {
 }
 
 .rodape {
-    border: 1px solid red;
+    margin-top: -1.5%;
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape__texto {
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 12px;
 }
 
 .principal__filtros {

@@ -17,6 +17,7 @@ function openNav() {
   document.getElementById("perfilUsuarioTexto").style.display = "inline";
   document.getElementById("configuracoesTexto").style.display = "inline";
   document.getElementById("sairTexto").style.display = "inline";
+  document.getElementById("copyrightSidebar").style.display = "inline";
 
   document.getElementById("logoBtn").style.margin = "10% 0 4% 0";
 
@@ -40,6 +41,7 @@ function closeNav() {
   document.getElementById("perfilUsuarioTexto").style.display = "None";
   document.getElementById("configuracoesTexto").style.display = "None";
   document.getElementById("sairTexto").style.display = "None";
+  document.getElementById("copyrightSidebar").style.display = "None";
 
   document.getElementById("logoBtn").style.margin = "25% 0 4% 0";
 

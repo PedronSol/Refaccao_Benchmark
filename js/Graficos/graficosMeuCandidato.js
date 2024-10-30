@@ -63,6 +63,8 @@ new Chart(graficoPostagensRede, {
   },
   options: {
     borderRadius: 8,
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       title: {
         display: false,
@@ -125,6 +127,8 @@ new Chart(graficoPostagensGenero, {
   },
   options: {
     borderRadius: 8,
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       title: {
         display: false,

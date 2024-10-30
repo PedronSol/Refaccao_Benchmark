@@ -624,16 +624,16 @@ new Chart(graficoPostagensRedeInstagramTerceiros, {
 
 //Graficos de Linha Do Volume de Postagens por Período de Tempo com Autoria do Candidato
 var gradientNatalia = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientNatalia.addColorStop(0, 'rgba(245, 90, 66, 1)');   
-gradientNatalia.addColorStop(1, 'rgba(245, 90, 66, 0.05)');
+gradientNatalia.addColorStop(0, 'rgba(245, 90, 66, 0.6)');   
+gradientNatalia.addColorStop(0.7, 'rgba(245, 90, 66, 0.05)');
 
 var gradientCarlosEduardo = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientCarlosEduardo.addColorStop(0, 'rgba(102, 245, 66, 1)');   
-gradientCarlosEduardo.addColorStop(1, 'rgba(102, 245, 66, 0.05)');
+gradientCarlosEduardo.addColorStop(0, 'rgba(102, 245, 66, 0.6)');   
+gradientCarlosEduardo.addColorStop(0.7, 'rgba(102, 245, 66, 0.05)');
 
 var gradientPaulinho = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientPaulinho.addColorStop(0, 'rgba(66, 93, 245, 1)');   
-gradientPaulinho.addColorStop(1, 'rgba(66, 93, 245, 0.05)');
+gradientPaulinho.addColorStop(0, 'rgba(66, 93, 245, 0.6)');   
+gradientPaulinho.addColorStop(0.7, 'rgba(66, 93, 245, 0.05)');
 
 new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
   type: "line",
