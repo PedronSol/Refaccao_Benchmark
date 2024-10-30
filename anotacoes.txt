@@ -1,0 +1,5 @@
+cor__bolinha__verde = #c3f8c8
+
+cor__bolinha__cinza = #c7c7c7
+
+cor__bolinha__vermelha = #ffb5b5
