@@ -327,6 +327,31 @@ hr {
     width: 60%;
 }
 
+.interativo__card__benchmark {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    height: 100%;
+    padding: 3% 0 3% 9%;
+}
+
+.bolinha__benchmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c7c7c7;
+    width: 6%;
+    height: 130%;
+    border-radius: 100px;
+    margin-right: 3%;
+}
+
+.interativo__card__texto__benchmark {
+    font-family: var(--fonte-merriweather);
+    font-optical-sizing: auto;
+    font-size: 13px;
+}
+
 .principal__conteudo__centro{
     height: 70.5%;
     display: flex;
