@@ -70,14 +70,120 @@ var neutrasInstagramTerceiros = [6, 0, 5];
 var construtivasInstagramTerceiros = [79, 10, 29];
 
 //Dados de Postagens Por Período de Tempo com Autoria do Candidato
-var datasCandidatoPaulinho = [3, 8, 4, 5, 6, 2, 7, 6, 18, 5, 1, 2, 3, 2, 8, 11, 2];
+var datasCandidatoPaulinho = [
+  3, 8, 4, 5, 6, 2, 7, 6, 18, 5, 1, 2, 3, 2, 8, 11, 2,
+];
 var datasCandidatoCarlos = [1, 5, 3, 4, 4, 1, 6, 3, 3, 2, 4, 2, 2, 3, 3, 4, 3];
-var datasCandidatoNatalia = [11, 5, 28, 6, 8, 4, 10, 11, 46, 6, 5, 4, 7, 4, 7, 4, 10, 10, 16];
+var datasCandidatoNatalia = [
+  11, 5, 28, 6, 8, 4, 10, 11, 46, 6, 5, 4, 7, 4, 7, 4, 10, 10, 16,
+];
 
 //Dados de Postagens Por Período de Tempo com Autoria de Terceiros
-var datasTerceirosPaulinho = [22, 52, 41, 24, 27, 36, 167, 31, 128, 27, 13, 32, 64, 61, 77, 57, 8, 3];
-var datasTerceirosCarlos = [3, 21, 7, 16, 39, 4, 8, 14, 36, 7, 18, 9, 1, 5, 9, 20, 11, 0];
-var datasTerceirosNatalia = [36, 40, 44, 15, 19, 37, 17, 11, 48, 8, 13, 35, 18, 21, 15, 37, 35, 2];
+var datasTerceirosPaulinho = [
+  22, 52, 41, 24, 27, 36, 167, 31, 128, 27, 13, 32, 64, 61, 77, 57, 8, 3,
+];
+var datasTerceirosCarlos = [
+  3, 21, 7, 16, 39, 4, 8, 14, 36, 7, 18, 9, 1, 5, 9, 20, 11, 0,
+];
+var datasTerceirosNatalia = [
+  36, 40, 44, 15, 19, 37, 17, 11, 48, 8, 13, 35, 18, 21, 15, 37, 35, 2,
+];
+
+//Dados do Twitter para Normalização
+var totalTwitterPaulinho =
+  desconstrutivasTwitterTerceiros[0] +
+  neutrasTwitterTerceiros[0] +
+  construtivasTwitterTerceiros[0];
+
+var totalTwitterCarlos =
+  desconstrutivasTwitterTerceiros[1] +
+  neutrasTwitterTerceiros[1] +
+  construtivasTwitterTerceiros[1];
+
+var totalTwitterNatalia =
+  desconstrutivasTwitterTerceiros[2] +
+  neutrasTwitterTerceiros[2] +
+  construtivasTwitterTerceiros[2];
+
+var desconstrutivasTwitterTerceirosNormalizada = [
+  356 / totalTwitterPaulinho,
+  36 / totalTwitterCarlos,
+  17 / totalTwitterNatalia,
+];
+var neutrasTwitterTerceirosNormalizada = [
+  54 / totalTwitterPaulinho,
+  19 / totalTwitterCarlos,
+  5 / totalTwitterNatalia,
+];
+var construtivasTwitterTerceirosNormalizada = [
+  76 / totalTwitterPaulinho,
+  9 / totalTwitterCarlos,
+  16 / totalTwitterNatalia,
+];
+
+//Dados do Facebook para Normalização
+var totalFacebookPaulinho =
+  desconstrutivasFacebookTerceiros[0] +
+  neutrasFacebookTerceiros[0] +
+  construtivasFacebookTerceiros[0];
+
+var totalFacebookCarlos =
+  desconstrutivasFacebookTerceiros[1] +
+  neutrasFacebookTerceiros[1] +
+  construtivasFacebookTerceiros[1];
+
+var totalFacebookNatalia =
+  desconstrutivasFacebookTerceiros[2] +
+  neutrasFacebookTerceiros[2] +
+  construtivasFacebookTerceiros[2];
+
+var desconstrutivasFacebookTerceirosNormalizada = [
+  125 / totalFacebookPaulinho,
+  37 / totalFacebookCarlos,
+  43 / totalFacebookNatalia,
+];
+var neutrasFacebookTerceirosNormalizada = [
+  35 / totalFacebookPaulinho,
+  32 / totalFacebookCarlos,
+  58 / totalFacebookNatalia,
+];
+var construtivasFacebookTerceirosNormalizada = [
+  135 / totalFacebookPaulinho,
+  84 / totalFacebookCarlos,
+  273 / totalFacebookNatalia,
+];
+
+//Dados do Instagram para Normalização
+var totalInstagramPaulinho =
+  desconstrutivasInstagramTerceiros[0] +
+  neutrasInstagramTerceiros[0] +
+  construtivasInstagramTerceiros[0];
+
+var totalInstagramCarlos =
+  desconstrutivasInstagramTerceiros[1] +
+  neutrasInstagramTerceiros[1] +
+  construtivasInstagramTerceiros[1];
+
+var totalInstagramNatalia =
+  desconstrutivasInstagramTerceiros[2] +
+  neutrasInstagramTerceiros[2] +
+  construtivasInstagramTerceiros[2];
+
+var desconstrutivasInstagramTerceirosNormalizada = [
+  4 / totalInstagramPaulinho,
+  1 / totalInstagramCarlos,
+  5 / totalInstagramNatalia,
+];
+var neutrasInstagramTerceirosNormalizada = [
+  6 / totalInstagramPaulinho,
+  0 / totalInstagramCarlos,
+  5 / totalInstagramNatalia,
+];
+var construtivasInstagramTerceirosNormalizada = [
+  79 / totalInstagramPaulinho,
+  10 / totalInstagramCarlos,
+  29 / totalInstagramNatalia,
+];
 
 //Grafico de Volume de Postagens com Autoria do Candidato
 var basePostagensCandidato = document
@@ -150,6 +256,11 @@ var graficoPostagensCandidato = new Chart(basePostagensCandidato, {
           font: {
             size: 16,
             weight: 600,
+          },
+        },
+        ticks: {
+          font: {
+            size: 14,
           },
         },
       },
@@ -228,6 +339,11 @@ var graficoPostagensTerceiros = new Chart(basePostagensTerceiros, {
             weight: 600,
           },
         },
+        ticks: {
+          font: {
+            size: 14,
+          },
+        },
       },
     },
   },
@@ -238,536 +354,611 @@ var basePostagensRedeTwitterCandidato = document
   .getElementById("grafico-postagens-rede-twitter-candidato")
   .getContext("2d");
 
-var graficoPostagensRedeTwitterCandidato = new Chart(basePostagensRedeTwitterCandidato, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasTwitterCandidato,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasTwitterCandidato,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasTwitterCandidato,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: true,
-        text: "Twitter",
-        position: "bottom",
-        font: {
-          size: 18,
+var graficoPostagensRedeTwitterCandidato = new Chart(
+  basePostagensRedeTwitterCandidato,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasTwitterCandidato,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasTwitterCandidato,
         },
-      },
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasTwitterCandidato,
+        },
+      ],
     },
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 14,
-          },
-        },
-      },
-      y: {
-        stacked: true,
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
         title: {
           display: true,
-          text: "Postagens",
+          text: "Twitter",
+          position: "bottom",
           font: {
-            size: 16,
-            weight: 600,
+            size: 18,
+          },
+          padding: {
+            top: 10,
           },
         },
-        max: 160,
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
+        y: {
+          stacked: true,
+          title: {
+            display: true,
+            text: "Postagens",
+            font: {
+              size: 16,
+              weight: 600,
+            },
+          },
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
       },
     },
-  },
-});
+  }
+);
 
 var basePostagensRedeFacebookCandidato = document
   .getElementById("grafico-postagens-rede-facebook-candidato")
   .getContext("2d");
 
-var graficoPostagensRedeFacebookCandidato = new Chart(basePostagensRedeFacebookCandidato, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasFacebookCandidato,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasFacebookCandidato,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasFacebookCandidato,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: true,
-        text: "Facebook",
-        position: "bottom",
-        font: {
-          size: 18,
+var graficoPostagensRedeFacebookCandidato = new Chart(
+  basePostagensRedeFacebookCandidato,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasFacebookCandidato,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasFacebookCandidato,
         },
-      },
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasFacebookCandidato,
+        },
+      ],
     },
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 14,
-          },
-        },
-      },
-      y: {
-        stacked: true,
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
         title: {
-          display: false,
-          text: "Postagens",
+          display: true,
+          text: "Facebook",
+          position: "bottom",
           font: {
-            size: 16,
-            weight: 600,
+            size: 18,
+          },
+          padding: {
+            top: 10,
           },
         },
-        max: 160,
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
+        y: {
+          stacked: true,
+          title: {
+            display: false,
+            text: "Postagens",
+            font: {
+              size: 16,
+              weight: 600,
+            },
+          },
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
       },
     },
-  },
-});
+  }
+);
 
 var basePostagensRedeInstagramCandidato = document
   .getElementById("grafico-postagens-rede-instagram-candidato")
   .getContext("2d");
 
-var graficoPostagensRedeInstagramCandidato = new Chart(basePostagensRedeInstagramCandidato, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasInstagramCandidato,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasInstagramCandidato,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasInstagramCandidato,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: true,
-        text: "Instagram",
-        position: "bottom",
-        font: {
-          size: 18,
+var graficoPostagensRedeInstagramCandidato = new Chart(
+  basePostagensRedeInstagramCandidato,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasInstagramCandidato,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasInstagramCandidato,
         },
-      },
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasInstagramCandidato,
+        },
+      ],
     },
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          font: {
-            size: 14,
-          },
-        },
-      },
-      y: {
-        stacked: true,
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
         title: {
-          display: false,
-          text: "Postagens",
+          display: true,
+          text: "Instagram",
+          position: "bottom",
           font: {
-            size: 16,
-            weight: 600,
+            size: 18,
+          },
+          padding: {
+            top: 10,
           },
         },
-        max: 160,
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
+        y: {
+          stacked: true,
+          title: {
+            display: false,
+            text: "Postagens",
+            font: {
+              size: 16,
+              weight: 600,
+            },
+          },
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
       },
     },
-  },
-});
+  }
+);
 
 //Graficos do Volume de Postagens por Rede Feitos por Terceiros
 var basePostagensRedeTwitterTerceiros = document
   .getElementById("grafico-postagens-rede-twitter-terceiros")
   .getContext("2d");
 
-var graficoPostagensRedeTwitterTerceiros = new Chart(basePostagensRedeTwitterTerceiros, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasTwitterTerceiros,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasTwitterTerceiros,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasTwitterTerceiros,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: false,
-        text: "Twitter",
-        position: "bottom",
-        font: {
-          size: 16,
+var graficoPostagensRedeTwitterTerceiros = new Chart(
+  basePostagensRedeTwitterTerceiros,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasTwitterTerceiros,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasTwitterTerceiros,
         },
-      },
-      legend: {
-        display: false,
-        position: "bottom",
-        align: "start",
-      },
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasTwitterTerceiros,
+        },
+      ],
     },
-    scales: {
-      y: {
-        max: 400,
-      },
-      x: {
-        ticks: {
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
+        title: {
+          display: false,
+          text: "Twitter",
+          position: "bottom",
           font: {
-            size: 15,
-            weight: 600,
+            size: 16,
+          },
+          padding: {
+            top: 10,
+          },
+        },
+        legend: {
+          display: false,
+          position: "bottom",
+          align: "start",
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 15,
+              weight: 600,
+            },
+          },
+        },
+        y: {
+          ticks: {
+            font: {
+              size: 14,
+            },
           },
         },
       },
     },
-  },
-});
+  }
+);
 
 var basePostagensRedeFacebookTerceiros = document
   .getElementById("grafico-postagens-rede-facebook-terceiros")
   .getContext("2d");
 
-var graficoPostagensRedeFacebookTerceiros = new Chart(basePostagensRedeFacebookTerceiros, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasFacebookTerceiros,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasFacebookTerceiros,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasFacebookTerceiros,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: false,
-        text: "Facebook",
-        position: "bottom",
-        font: {
-          size: 16,
+var graficoPostagensRedeFacebookTerceiros = new Chart(
+  basePostagensRedeFacebookTerceiros,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasFacebookTerceiros,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasFacebookTerceiros,
         },
-      },
-      legend: {
-        position: "top",
-        align: "end",
-      },
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasFacebookTerceiros,
+        },
+      ],
     },
-    scales: {
-      y: {
-        max: 400,
-      },
-      x: {
-        ticks: {
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
+        title: {
+          display: false,
+          text: "Facebook",
+          position: "bottom",
           font: {
-            size: 15,
-            weight: 600,
+            size: 16,
+          },
+          padding: {
+            top: 10,
+          },
+        },
+        legend: {
+          position: "top",
+          align: "end",
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 15,
+              weight: 600,
+            },
+          },
+        },
+        y: {
+          ticks: {
+            font: {
+              size: 14,
+            },
           },
         },
       },
     },
-  },
-});
+  }
+);
 
 var basePostagensRedeInstagramTerceiros = document
   .getElementById("grafico-postagens-rede-instagram-terceiros")
   .getContext("2d");
 
-var graficoPostagensRedeInstagramTerceiros = new Chart(basePostagensRedeInstagramTerceiros, {
-  type: "bar",
-  data: {
-    labels: ["Paulinho", "Carlos Eduardo", "Natália"],
-    datasets: [
-      {
-        label: "Desconstrutivas",
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        data: desconstrutivasInstagramTerceiros,
-      },
-      {
-        label: "Neutras",
-        backgroundColor: "rgba(255, 206, 86, 0.7)",
-        data: neutrasInstagramTerceiros,
-      },
-      {
-        label: "Construtivas",
-        backgroundColor: "rgba(75, 192, 192, 0.7)",
-        data: construtivasInstagramTerceiros,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    borderRadius: 8,
-    plugins: {
-      title: {
-        display: false,
-        text: "Instagram",
-        position: "bottom",
-        font: {
-          size: 16,
+var graficoPostagensRedeInstagramTerceiros = new Chart(
+  basePostagensRedeInstagramTerceiros,
+  {
+    type: "bar",
+    data: {
+      labels: ["Paulinho", "Carlos Eduardo", "Natália"],
+      datasets: [
+        {
+          label: "Desconstrutivas",
+          backgroundColor: "rgba(255, 99, 132, 0.7)",
+          data: desconstrutivasInstagramTerceiros,
         },
-        padding: {
-          top: 10,
+        {
+          label: "Neutras",
+          backgroundColor: "rgba(255, 206, 86, 0.7)",
+          data: neutrasInstagramTerceiros,
         },
-      },
-      legend: {
-        position: "bottom",
-        align: "start",
-        font: {
-          size: 14,
+        {
+          label: "Construtivas",
+          backgroundColor: "rgba(75, 192, 192, 0.7)",
+          data: construtivasInstagramTerceiros,
         },
-      },
+      ],
     },
-    scales: {
-      y: {
-        max: 400,
-      },
-      x: {
-        ticks: {
+    options: {
+      maintainAspectRatio: false,
+      borderRadius: 8,
+      plugins: {
+        title: {
+          display: false,
+          text: "Instagram",
+          position: "bottom",
           font: {
             size: 16,
-            weight: 600,
+          },
+          padding: {
+            top: 10,
+          },
+        },
+        legend: {
+          position: "bottom",
+          align: "start",
+          font: {
+            size: 14,
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 16,
+              weight: 600,
+            },
+          },
+        },
+        y: {
+          ticks: {
+            font: {
+              size: 14,
+            },
           },
         },
       },
     },
-  },
-});
+  }
+);
 
 //Graficos de Linha Do Volume de Postagens por Período de Tempo com Autoria do Candidato
-var gradientNatalia = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientNatalia.addColorStop(0, 'rgba(245, 90, 66, 0.6)');   
-gradientNatalia.addColorStop(0.7, 'rgba(245, 90, 66, 0.05)');
+var gradientNatalia = document
+  .getElementById("grafico-postagens-tempo-terceiros")
+  .getContext("2d")
+  .createLinearGradient(0, 0, 0, 400);
+gradientNatalia.addColorStop(0, "rgba(245, 90, 66, 0.6)");
+gradientNatalia.addColorStop(0.7, "rgba(245, 90, 66, 0.05)");
 
-var gradientCarlosEduardo = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientCarlosEduardo.addColorStop(0, 'rgba(102, 245, 66, 0.6)');   
-gradientCarlosEduardo.addColorStop(0.7, 'rgba(102, 245, 66, 0.05)');
+var gradientCarlosEduardo = document
+  .getElementById("grafico-postagens-tempo-terceiros")
+  .getContext("2d")
+  .createLinearGradient(0, 0, 0, 400);
+gradientCarlosEduardo.addColorStop(0, "rgba(102, 245, 66, 0.6)");
+gradientCarlosEduardo.addColorStop(0.7, "rgba(102, 245, 66, 0.05)");
 
-var gradientPaulinho = document.getElementById("grafico-postagens-tempo-terceiros").getContext("2d").createLinearGradient(0, 0, 0, 400);
-gradientPaulinho.addColorStop(0, 'rgba(66, 93, 245, 0.6)');   
-gradientPaulinho.addColorStop(0.7, 'rgba(66, 93, 245, 0.05)');
+var gradientPaulinho = document
+  .getElementById("grafico-postagens-tempo-terceiros")
+  .getContext("2d")
+  .createLinearGradient(0, 0, 0, 400);
+gradientPaulinho.addColorStop(0, "rgba(66, 93, 245, 0.6)");
+gradientPaulinho.addColorStop(0.7, "rgba(66, 93, 245, 0.05)");
 
-var graficoPostagensPeriodoTempoCandidato= new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
-  type: "line",
-  data: {
-    labels: [
-      "01/08/2024",
-      "02/08/2024",
-      "03/08/2024",
-      "04/08/2024",
-      "05/08/2024",
-      "06/08/2024",
-      "07/08/2024",
-      "08/08/2024",
-      "09/08/2024",
-      "10/08/2024",
-      "11/08/2024",
-      "12/08/2024",
-      "13/08/2024",
-      "14/08/2024",
-      "15/08/2024",
-      "16/08/2024",
-      "17/08/2024",
-    ],
-    datasets: [
-      {
-        data: datasCandidatoNatalia,
-        label: "Natália",
-        borderColor: "#f55a42",
-        fill: false,
-        tension: 0.3,
-      },
-      {
-        data: datasCandidatoPaulinho,
-        label: "Paulinho",
-        borderColor: "#425df5",
-        fill: false,
-        tension: 0.3,
-      },
-      {
-        data: datasCandidatoCarlos,
-        label: "Carlos Eduardo",
-        borderColor: "#66f542",
-        fill: false,
-        tension: 0.3,
-      }
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    plugins: {
-      title: {
-        display: false,
-        text: "Volume de Postagens Por Período de Tempo com Autoria do Candidato",
-        font: {
-          size: 18
-        }
-      },
-      legend: {
-        align: "end"
-      }
+var graficoPostagensPeriodoTempoCandidato = new Chart(
+  document.getElementById("grafico-postagens-tempo-candidato"),
+  {
+    type: "line",
+    data: {
+      labels: [
+        "01/08/2024",
+        "02/08/2024",
+        "03/08/2024",
+        "04/08/2024",
+        "05/08/2024",
+        "06/08/2024",
+        "07/08/2024",
+        "08/08/2024",
+        "09/08/2024",
+        "10/08/2024",
+        "11/08/2024",
+        "12/08/2024",
+        "13/08/2024",
+        "14/08/2024",
+        "15/08/2024",
+        "16/08/2024",
+        "17/08/2024",
+      ],
+      datasets: [
+        {
+          data: datasCandidatoNatalia,
+          label: "Natália",
+          borderColor: "#f55a42",
+          fill: false,
+          tension: 0.3,
+        },
+        {
+          data: datasCandidatoPaulinho,
+          label: "Paulinho",
+          borderColor: "#425df5",
+          fill: false,
+          tension: 0.3,
+        },
+        {
+          data: datasCandidatoCarlos,
+          label: "Carlos Eduardo",
+          borderColor: "#66f542",
+          fill: false,
+          tension: 0.3,
+        },
+      ],
     },
-  },
-});
-
-var graficoPostagensPeriodoTempoTerceiros = new Chart(document.getElementById("grafico-postagens-tempo-terceiros"), {
-  type: "line",
-  data: {
-    labels: [
-      "01/08/2024",
-      "02/08/2024",
-      "03/08/2024",
-      "04/08/2024",
-      "05/08/2024",
-      "06/08/2024",
-      "07/08/2024",
-      "08/08/2024",
-      "09/08/2024",
-      "10/08/2024",
-      "11/08/2024",
-      "12/08/2024",
-      "13/08/2024",
-      "14/08/2024",
-      "15/08/2024",
-      "16/08/2024",
-      "17/08/2024",
-    ],
-    datasets: [
-      {
-        data: datasTerceirosPaulinho,
-        label: "Paulinho",
-        borderColor: "#425df5",
-        backgroundColor: gradientPaulinho,
-        fill: true,
-        tension: 0.3,
-        order: 3,
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        title: {
+          display: false,
+          text: "Volume de Postagens Por Período de Tempo com Autoria do Candidato",
+          font: {
+            size: 18,
+          },
+        },
+        legend: {
+          align: "end",
+        },
       },
-      {
-        data: datasTerceirosCarlos,
-        label: "Carlos Eduardo",
-        borderColor: "#66f542",
-        backgroundColor: gradientCarlosEduardo,
-        fill: true,
-        tension: 0.3,
-        order: 1,
+      scales: {
+        y: {
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
       },
-      {
-        data: datasTerceirosNatalia,
-        label: "Natália",
-        borderColor: "#f55a42",
-        backgroundColor: gradientNatalia,
-        fill: true,
-        tension: 0.3,
-        order: 2,
-      },
-    ],
-  },
-  options: {
-    maintainAspectRatio: false,
-    plugins: {
-      title: {
-        display: false,
-        text: "Volume de Postagens Por Período de Tempo com Autoria do Candidato",
-        font: {
-          size: 18
-        }
-      },
-      legend: {
-        align: "start",
-        position: "right"
-      }
     },
-  },
-});
+  }
+);
+
+var graficoPostagensPeriodoTempoTerceiros = new Chart(
+  document.getElementById("grafico-postagens-tempo-terceiros"),
+  {
+    type: "line",
+    data: {
+      labels: [
+        "01/08/2024",
+        "02/08/2024",
+        "03/08/2024",
+        "04/08/2024",
+        "05/08/2024",
+        "06/08/2024",
+        "07/08/2024",
+        "08/08/2024",
+        "09/08/2024",
+        "10/08/2024",
+        "11/08/2024",
+        "12/08/2024",
+        "13/08/2024",
+        "14/08/2024",
+        "15/08/2024",
+        "16/08/2024",
+        "17/08/2024",
+      ],
+      datasets: [
+        {
+          data: datasTerceirosPaulinho,
+          label: "Paulinho",
+          borderColor: "#425df5",
+          backgroundColor: gradientPaulinho,
+          fill: true,
+          tension: 0.3,
+          order: 3,
+        },
+        {
+          data: datasTerceirosCarlos,
+          label: "Carlos Eduardo",
+          borderColor: "#66f542",
+          backgroundColor: gradientCarlosEduardo,
+          fill: true,
+          tension: 0.3,
+          order: 1,
+        },
+        {
+          data: datasTerceirosNatalia,
+          label: "Natália",
+          borderColor: "#f55a42",
+          backgroundColor: gradientNatalia,
+          fill: true,
+          tension: 0.3,
+          order: 2,
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        title: {
+          display: false,
+          text: "Volume de Postagens Por Período de Tempo com Autoria do Candidato",
+          font: {
+            size: 18,
+          },
+        },
+        legend: {
+          align: "start",
+          position: "right",
+        },
+      },
+      scales: {
+        y: {
+          ticks: {
+            font: {
+              size: 14,
+            },
+          },
+        },
+      },
+    },
+  }
+);
