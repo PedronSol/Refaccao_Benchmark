@@ -35,11 +35,11 @@ var cardPostagensConstrutivas = document.getElementById(
 cardPostagensConstrutivas.textContent = totalConstrutivas;
 
 //Gráfico do volume de postagens por rede
-var graficoPostagensRede = document
+var basePostagensRede = document
   .getElementById("grafico-postagens-rede")
   .getContext("2d");
 
-new Chart(graficoPostagensRede, {
+var graficoPostagensRede = new Chart(basePostagensRede, {
   type: "bar",
   data: {
     labels: ["Desconstrutivas", "Neutras", "Construtivas"],
@@ -99,11 +99,11 @@ new Chart(graficoPostagensRede, {
 });
 
 //Gráfico do volume de postagens por gênero
-var graficoPostagensGenero = document
+var basePostagensGenero = document
   .getElementById("grafico-postagens-genero")
   .getContext("2d");
 
-new Chart(graficoPostagensGenero, {
+var graficoPostagensGenero = new Chart(basePostagensGenero, {
   type: "bar",
   data: {
     labels: ["Desconstrutivas", "Neutras", "Construtivas"],
@@ -170,11 +170,11 @@ new Chart(graficoPostagensGenero, {
 });
 
 //Gráfico da timeline de postagens
-var graficoPostagensTimeline = document
+var basePostagensTimeline = document
   .getElementById("grafico-postagens-timeline")
   .getContext("2d");
 
-new Chart(graficoPostagensTimeline, {
+var graficoPostagensTimeline = new Chart(basePostagensTimeline, {
   type: "bar",
   data: {
     labels: [
@@ -254,8 +254,8 @@ new Chart(graficoPostagensTimeline, {
 });
 
 //Gráficos de Pizza
-var graficoPizzaDesconstrutivo = document.getElementById("grafico-pizza-desconstrutivo").getContext("2d");
-new Chart(graficoPizzaDesconstrutivo, {
+var basePizzaDesconstrutivo = document.getElementById("grafico-pizza-desconstrutivo").getContext("2d");
+var graficoPizzaDesconstrutivo = new Chart(basePizzaDesconstrutivo, {
   type: "pie",
   data: {
     labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
@@ -296,8 +296,8 @@ new Chart(graficoPizzaDesconstrutivo, {
   },
 });
 
-var graficoPizzaNeutro = document.getElementById("grafico-pizza-neutro").getContext("2d");
-new Chart(graficoPizzaNeutro, {
+var basePizzaNeutro = document.getElementById("grafico-pizza-neutro").getContext("2d");
+var graficoPizzaNeutro = new Chart(basePizzaNeutro, {
   type: "pie",
   data: {
     labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],
@@ -340,8 +340,8 @@ new Chart(graficoPizzaNeutro, {
   },
 });
 
-var graficoPizzaConstrutivo = document.getElementById("grafico-pizza-construtivo").getContext("2d");
-new Chart(graficoPizzaConstrutivo, {
+var basePizzaConstrutivo = document.getElementById("grafico-pizza-construtivo").getContext("2d");
+var graficoPizzaConstrutivo = new Chart(basePizzaConstrutivo, {
   type: "pie",
   data: {
     labels: ["Educação", "Transporte", "Segurança", "Saúde", "Economia"],

@@ -80,11 +80,11 @@ var datasTerceirosCarlos = [3, 21, 7, 16, 39, 4, 8, 14, 36, 7, 18, 9, 1, 5, 9, 2
 var datasTerceirosNatalia = [36, 40, 44, 15, 19, 37, 17, 11, 48, 8, 13, 35, 18, 21, 15, 37, 35, 2];
 
 //Grafico de Volume de Postagens com Autoria do Candidato
-var graficoPostagensCandidato = document
+var basePostagensCandidato = document
   .getElementById("grafico-postagens-candidato")
   .getContext("2d");
 
-new Chart(graficoPostagensCandidato, {
+var graficoPostagensCandidato = new Chart(basePostagensCandidato, {
   type: "bar",
   data: {
     labels: ["Paulinho Freire", "Carlos Eduardo", "Natália Bonavides"],
@@ -158,11 +158,11 @@ new Chart(graficoPostagensCandidato, {
 });
 
 //Grafico de Volume de Postagens com Autoria de Terceiros
-var graficoPostagensTerceiros = document
+var basePostagensTerceiros = document
   .getElementById("grafico-postagens-terceiros")
   .getContext("2d");
 
-new Chart(graficoPostagensTerceiros, {
+var graficoPostagensTerceiros = new Chart(basePostagensTerceiros, {
   type: "bar",
   data: {
     labels: ["Paulinho Freire", "Carlos Eduardo", "Natália Bonavides"],
@@ -234,11 +234,11 @@ new Chart(graficoPostagensTerceiros, {
 });
 
 //Graficos de Postagens por Rede com Autoria do Candidato
-var graficoPostagensRedeTwitterCandidato = document
+var basePostagensRedeTwitterCandidato = document
   .getElementById("grafico-postagens-rede-twitter-candidato")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeTwitterCandidato, {
+var graficoPostagensRedeTwitterCandidato = new Chart(basePostagensRedeTwitterCandidato, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -301,11 +301,11 @@ new Chart(graficoPostagensRedeTwitterCandidato, {
   },
 });
 
-var graficoPostagensRedeFacebookCandidato = document
+var basePostagensRedeFacebookCandidato = document
   .getElementById("grafico-postagens-rede-facebook-candidato")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeFacebookCandidato, {
+var graficoPostagensRedeFacebookCandidato = new Chart(basePostagensRedeFacebookCandidato, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -368,11 +368,11 @@ new Chart(graficoPostagensRedeFacebookCandidato, {
   },
 });
 
-var graficoPostagensRedeInstagramCandidato = document
+var basePostagensRedeInstagramCandidato = document
   .getElementById("grafico-postagens-rede-instagram-candidato")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeInstagramCandidato, {
+var graficoPostagensRedeInstagramCandidato = new Chart(basePostagensRedeInstagramCandidato, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -436,11 +436,11 @@ new Chart(graficoPostagensRedeInstagramCandidato, {
 });
 
 //Graficos do Volume de Postagens por Rede Feitos por Terceiros
-var graficoPostagensRedeTwitterTerceiros = document
+var basePostagensRedeTwitterTerceiros = document
   .getElementById("grafico-postagens-rede-twitter-terceiros")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeTwitterTerceiros, {
+var graficoPostagensRedeTwitterTerceiros = new Chart(basePostagensRedeTwitterTerceiros, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -499,11 +499,11 @@ new Chart(graficoPostagensRedeTwitterTerceiros, {
   },
 });
 
-var graficoPostagensRedeFacebookTerceiros = document
+var basePostagensRedeFacebookTerceiros = document
   .getElementById("grafico-postagens-rede-facebook-terceiros")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeFacebookTerceiros, {
+var graficoPostagensRedeFacebookTerceiros = new Chart(basePostagensRedeFacebookTerceiros, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -561,11 +561,11 @@ new Chart(graficoPostagensRedeFacebookTerceiros, {
   },
 });
 
-var graficoPostagensRedeInstagramTerceiros = document
+var basePostagensRedeInstagramTerceiros = document
   .getElementById("grafico-postagens-rede-instagram-terceiros")
   .getContext("2d");
 
-new Chart(graficoPostagensRedeInstagramTerceiros, {
+var graficoPostagensRedeInstagramTerceiros = new Chart(basePostagensRedeInstagramTerceiros, {
   type: "bar",
   data: {
     labels: ["Paulinho", "Carlos Eduardo", "Natália"],
@@ -639,7 +639,7 @@ var gradientPaulinho = document.getElementById("grafico-postagens-tempo-terceiro
 gradientPaulinho.addColorStop(0, 'rgba(66, 93, 245, 0.6)');   
 gradientPaulinho.addColorStop(0.7, 'rgba(66, 93, 245, 0.05)');
 
-new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
+var graficoPostagensPeriodoTempoCandidato= new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
   type: "line",
   data: {
     labels: [
@@ -702,7 +702,7 @@ new Chart(document.getElementById("grafico-postagens-tempo-candidato"), {
   },
 });
 
-new Chart(document.getElementById("grafico-postagens-tempo-terceiros"), {
+var graficoPostagensPeriodoTempoTerceiros = new Chart(document.getElementById("grafico-postagens-tempo-terceiros"), {
   type: "line",
   data: {
     labels: [
