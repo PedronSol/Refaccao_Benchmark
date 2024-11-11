@@ -52,6 +52,10 @@ function trocaGraficoTwitterPadrao() {
         position: "bottom",
         align: "start",
       },
+      tooltip: {
+        xAlign: 'center',
+        yalign: 'bottom'
+      }
     },
     scales: {
       y: {
@@ -115,6 +119,48 @@ function trocaGraficoTwitterNormalizado() {
         display: false,
         position: "bottom",
         align: "start",
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+
+            if(tooltipItem.datasetIndex == 0){
+              if(tooltipItem.dataIndex == 0){
+                return `${(desconstrutivasTwitterTerceirosNormalizada[0]*100).toFixed(0)}% (${desconstrutivasTwitterTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(desconstrutivasTwitterTerceirosNormalizada[1]*100).toFixed(0)}% (${desconstrutivasTwitterTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(desconstrutivasTwitterTerceirosNormalizada[2]*100).toFixed(0)}% (${desconstrutivasTwitterTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 1){
+              if(tooltipItem.dataIndex == 0){
+                return `${(neutrasTwitterTerceirosNormalizada[0]*100).toFixed(0)}% (${neutrasTwitterTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(neutrasTwitterTerceirosNormalizada[1]*100).toFixed(0)}% (${neutrasTwitterTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(neutrasTwitterTerceirosNormalizada[2]*100).toFixed(0)}% (${neutrasTwitterTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 2){
+              if(tooltipItem.dataIndex == 0){
+                return `${(construtivasTwitterTerceirosNormalizada[0]*100).toFixed(0)}% (${construtivasTwitterTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(construtivasTwitterTerceirosNormalizada[1]*100).toFixed(0)}% (${construtivasTwitterTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(construtivasTwitterTerceirosNormalizada[2]*100).toFixed(0)}% (${construtivasTwitterTerceiros[2]} Postagens)`;
+              }
+            }
+          },
+        },
+        xAlign: 'center',
+        yalign: 'bottom'
       },
     },
     scales: {
@@ -260,6 +306,46 @@ function trocaGraficoFacebookNormalizado() {
         position: "top",
         align: "end",
       },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+
+            if(tooltipItem.datasetIndex == 0){
+              if(tooltipItem.dataIndex == 0){
+                return `${(desconstrutivasFacebookTerceirosNormalizada[0]*100).toFixed(0)}% (${desconstrutivasFacebookTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(desconstrutivasFacebookTerceirosNormalizada[1]*100).toFixed(0)}% (${desconstrutivasFacebookTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(desconstrutivasFacebookTerceirosNormalizada[2]*100).toFixed(0)}% (${desconstrutivasFacebookTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 1){
+              if(tooltipItem.dataIndex == 0){
+                return `${(neutrasFacebookTerceirosNormalizada[0]*100).toFixed(0)}% (${neutrasFacebookTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(neutrasFacebookTerceirosNormalizada[1]*100).toFixed(0)}% (${neutrasFacebookTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(neutrasFacebookTerceirosNormalizada[2]*100).toFixed(0)}% (${neutrasFacebookTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 2){
+              if(tooltipItem.dataIndex == 0){
+                return `${(construtivasFacebookTerceirosNormalizada[0]*100).toFixed(0)}% (${construtivasFacebookTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(construtivasFacebookTerceirosNormalizada[1]*100).toFixed(0)}% (${construtivasFacebookTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(construtivasFacebookTerceirosNormalizada[2]*100).toFixed(0)}% (${construtivasFacebookTerceiros[2]} Postagens)`;
+              }
+            }
+          },
+        },
+      },
     },
     scales: {
       y: {
@@ -403,6 +489,46 @@ function trocaGraficoInstagramNormalizado() {
         display: true,
         position: "bottom",
         align: "start",
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+
+            if(tooltipItem.datasetIndex == 0){
+              if(tooltipItem.dataIndex == 0){
+                return `${(desconstrutivasInstagramTerceirosNormalizada[0]*100).toFixed(0)}% (${desconstrutivasInstagramTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(desconstrutivasInstagramTerceirosNormalizada[1]*100).toFixed(0)}% (${desconstrutivasInstagramTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(desconstrutivasInstagramTerceirosNormalizada[2]*100).toFixed(0)}% (${desconstrutivasInstagramTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 1){
+              if(tooltipItem.dataIndex == 0){
+                return `${(neutrasInstagramTerceirosNormalizada[0]*100).toFixed(0)}% (${neutrasInstagramTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(neutrasInstagramTerceirosNormalizada[1]*100).toFixed(0)}% (${neutrasInstagramTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(neutrasInstagramTerceirosNormalizada[2]*100).toFixed(0)}% (${neutrasInstagramTerceiros[2]} Postagens)`;
+              }
+            }
+            if(tooltipItem.datasetIndex == 2){
+              if(tooltipItem.dataIndex == 0){
+                return `${(construtivasInstagramTerceirosNormalizada[0]*100).toFixed(0)}% (${construtivasInstagramTerceiros[0]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 1){
+                return `${(construtivasInstagramTerceirosNormalizada[1]*100).toFixed(0)}% (${construtivasInstagramTerceiros[1]} Postagens)`;
+              }
+              if(tooltipItem.dataIndex == 2){
+                return `${(construtivasInstagramTerceirosNormalizada[2]*100).toFixed(0)}% (${construtivasInstagramTerceiros[2]} Postagens)`;
+              }
+            }
+          },
+        },
       },
     },
     scales: {
