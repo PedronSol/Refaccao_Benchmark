@@ -2,6 +2,7 @@
 
 :root{
     --fonte-merriweather: "Merriweather Sans", sans-serif;
+    --cor-background:#06225F;
 }
 
 ::placeholder{
@@ -24,71 +25,55 @@ body {
     overflow: hidden;
 }
 
-.centro__pagina {
+.pagina__login{
+    position: relative;
+    background-color: var(--cor-background);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 3%;
-}
-
-.pagina__login {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    background-color: #06225F;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .pagina__login__esquerda {
-    position: relative;
-    width: 25%;
-}
-
-.imagem__login__esquerda{
-    margin-top: -7.5%;
+    width: 33%;
 }
 
 .pagina__login__centro {
     display: flex;
-    background-color: transparent;
-    width: 50%;
-    height: 100%;
     justify-content: center;
     align-items: center;
+    width: 34%;
+    height: 100%;
 }
 
-.imagem__login__centro {
-    position: absolute;
-    top: 7%;
-    right: 25.2%;
-}
-
-.pagina__login__card {
+.pagina__login__card{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 70%;
+    height: 65%;
+    width: 78%;
+    justify-content: space-between;
     border-radius: 24px;
-    background-color: white;
+    padding: 6%;
+    min-height: 400px;
+    min-width: 320px;
     z-index: 1;
-    gap: 4%;
 }
 
-.login__card__topo {
-    padding: 8% 6% 0;
+
+.login__card__centro{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
 }
 
-.login__card__centro {
-    padding: 2% 6% 0;
-}
-
-.titulo__login {
+.titulo__login{
     font-family: var(--fonte-merriweather);
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .texto__login {
@@ -99,6 +84,13 @@ body {
     color: #A3AED0;
     font-size: 16px;
     margin: 5% 0;
+}
+
+.formulario__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 65%;
 }
 
 .formulario__label{
@@ -112,19 +104,15 @@ body {
 .formulario__input{
     width: 94%;
     border-radius: 16px;
-    padding: 3.5%;
-    margin: 1% 0 7% 0;
+    padding: 3%;
+    margin: -5% 0 0 0;
     border: 0.5px solid #E0E5F2;
-    font-family: var(--fonte-merriweather);
-    font-optical-sizing: auto;
-    font-weight: 400;
 }
 
 .login__card__rodape {
-    padding: 1% 6%;
+    height: 20%;
     display: flex;
     flex-direction: column;
-    height: 50%;
 }
 
 .rodape__opcoes{
@@ -161,8 +149,8 @@ body {
 .checked::after {
     content: "";
     position: absolute;
-    left: 25%;
-    top: -3.5%;
+    left: 27%;
+    top: -5%;
     width: 5px;
     height: 10px;
 
@@ -189,10 +177,6 @@ body {
     font-size: 14px;
 }
 
-.rodape__link:hover {
-    color: #06225F;
-}
-
 .rodape__botao {
     display: flex;
     text-decoration: none;
@@ -205,18 +189,20 @@ body {
     font-size: 18px;
     justify-content: center;
     align-items: center;
-    margin: 2em auto 0 auto;
+    margin: 8% auto 0 auto;
     width: 80%;
-    height: 35%;
+    height: 40%;
     border-radius: 16px;
 }
 
-.rodape__botao:hover {
-    background-color: #06225F;
+.pagina__login__direita {
+    width: 33%;
+    height: 100%;
 }
 
-.pagina__login__direita {
-    width: 25%;
-    height: 100%;
-    background-color: transparent;
+.imagem__background__n{
+    position: absolute;
+    top: 8%;
+    left: 58%;
+    z-index: 0;
 }
