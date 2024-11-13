@@ -221,16 +221,16 @@ hr {
   align-items: center;
   justify-content: center;
   background-color: #c7c7c7;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 100px;
-  margin-right: 3%;
 }
 
 .interativo__card__texto {
   font-family: var(--fonte-merriweather);
   font-optical-sizing: auto;
   font-size: 13px;
+  margin-left: 4px;
 }
 
 .esquerda__card {
@@ -727,7 +727,14 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1600px){
+  .bolinha{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
   .direita__card,
   .direita__card__benchmark {
     display: none;
@@ -741,5 +748,13 @@ input:checked + .slider:before {
   .card__texto,
   .card__texto__benchmark {
     margin-top: 0;
+  }
+
+  .sidebar__link__texto{
+    font-size: 12px;
+  }
+
+  .card__titulo__benchmark{
+    margin-bottom: 8%;
   }
 }
